@@ -78,7 +78,7 @@
 
 Vier Befehle decken den Alltag ab:
 
-\`\`\`bash
+```bash
 # Was hat sich seit dem letzten Commit geändert?
 git status
 
@@ -91,7 +91,7 @@ git restore .
 
 # Wo bin ich in der History?
 git log --oneline
-\`\`\`
+```
 
 **Rhythmus:** Nach jeder funktionierenden Änderung committen. Lieber zu viele kleine als zu wenige große. Vor riskanten Änderungen vorher committen — der vorherige Stand ist dann ein klarer Rücksprung-Punkt.
 
@@ -150,7 +150,7 @@ git log --oneline
 
 ## Opening Prompt für nächste Session
 
-\`\`\`
+```
 Wir arbeiten am holytouch-Projekt weiter. STATUS.md liegt im Repo.
 
 Lies bitte zuerst STATUS.md durch (cat STATUS.md), dann gib mir zurück:
@@ -163,7 +163,7 @@ Workflow-Regeln aus STATUS beachten: direkt, kein Cushioning,
 
 Vor jeder Code-Änderung: kurzer git status und ggf. git log --oneline,
 um den aktuellen Stand zu verifizieren.
-\`\`\`
+```
 
 ---
 

@@ -1,0 +1,38 @@
+# Node dependencies — werden mit "npm install" neu erzeugt
+node_modules/
+
+# Next.js Build-Output — wird bei jedem Build neu erzeugt
+.next/
+/out/
+
+# macOS-Müll
+.DS_Store
+
+# Logs
+*.log
+
+# Secrets — NIEMALS in Git
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# TypeScript Build-Info
+*.tsbuildinfo
+
+# IDE-Konfigurationen
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Source-Assets (Original-Fotos in voller Auflösung) — gehören nicht ins Code-Repo
+material/
+
+# Claude Code / AI-Tooling lokaler State
+.agents/
+.claude/
+.impeccable/
+skills-lock.json

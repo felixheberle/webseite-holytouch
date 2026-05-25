@@ -52,10 +52,10 @@ export function Marisha() {
               }}
             >
               <p style={{ marginBottom: '2rem' }}>
-                Marisha hat über die Jahre verschiedene Therapie- und Gruppenformen ausprobiert. Sie kamen alle an einen Punkt, an dem sie nicht weiterführten, weil Berührung darin keinen Raum hatte. Es fühlte sich falsch an, einer Person, die drei, vier Meter entfernt saß, das Intimste zu erzählen.
+                Ich habe über die Jahre verschiedene Therapie- und Gruppenformen ausprobiert. Sie kamen alle an einen Punkt, an dem sie nicht weiterführten, weil Berührung darin keinen Raum hatte. Es fühlte sich falsch an, einer Person, die drei, vier Meter entfernt saß, das Intimste zu erzählen.
               </p>
               <p>
-                Daraus ist ihre Arbeit entstanden: Klientinnen wieder dahin zu führen, sich im eigenen Körper zu spüren. Präsent zu sein. Sicher zu sein.
+                Daraus ist meine Arbeit entstanden: Klientinnen wieder dahin zu führen, sich im eigenen Körper zu spüren. Präsent zu sein. Sicher zu sein.
               </p>
             </div>
 

@@ -39,9 +39,7 @@ export function Marisha() {
             >
               Zwanzig Jahre.
               <br />
-              Körper, Gespräch,
-              <br />
-              Verbindung.
+              Sich im eigenen Körper wieder spüren.
             </h2>
 
             <div

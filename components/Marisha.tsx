@@ -59,15 +59,18 @@ export function Marisha() {
               </p>
             </div>
 
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {credentials.map((c) => (
                 <li
                   key={c}
-                  className="section-label"
                   style={{
                     display: 'flex',
                     alignItems: 'baseline',
                     gap: '0.75rem',
+                    color: 'oklch(88% 0.012 85)',
+                    fontSize: '1.125rem',
+                    letterSpacing: '0.02em',
+                    lineHeight: 1.5,
                   }}
                 >
                   <span

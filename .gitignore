@@ -31,8 +31,6 @@ node_modules/
 # Source-Assets (Original-Fotos in voller Auflösung) — gehören nicht ins Code-Repo
 material/
 
-# Claude Code / AI-Tooling lokaler State
-.agents/
+# Claude Code Session-/Projekt-Cache (Laufzeit-Daten, kein Code)
 .claude/
 .impeccable/
-skills-lock.json

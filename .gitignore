@@ -34,3 +34,4 @@ material/
 # Claude Code Session-/Projekt-Cache (Laufzeit-Daten, kein Code)
 .claude/
 .impeccable/
+public/photos/originals-backup/

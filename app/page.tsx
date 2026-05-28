@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero'
 import { PositioningLine } from '@/components/PositioningLine'
 import { Recognition } from '@/components/Recognition'
 import { Method } from '@/components/Method'
+import { VerstandKoerper } from '@/components/VerstandKoerper'
 import { Marisha } from '@/components/Marisha'
 import { Angebot } from '@/components/Angebot'
 import Erfahrungen from '@/components/Erfahrungen'
@@ -18,6 +19,7 @@ export default function HomePage() {
         <PositioningLine />
         <Recognition />
         <Method />
+        <VerstandKoerper />
         <Marisha />
         <Angebot />
         <Erfahrungen />

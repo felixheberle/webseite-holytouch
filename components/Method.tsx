@@ -65,7 +65,7 @@ export function Method() {
                 Psychosomatische Körpertherapie verbindet Gespräch und Körperarbeit. Manche Themen sitzen so tief im Körper, dass Worte allein sie nicht erreichen.
               </p>
               <p style={{ marginBottom: '2rem' }}>
-                Im Gespräch richten wir den Blick auf das, was sich im Körper zeigt. In der Behandlung wird spürbar, wo Themen sich festgesetzt haben. Durch Körperberührung und Atem findet das Nervensystem seinen Weg zurück zur Ruhe.
+                Im Gespräch richten wir den Blick auf das, was sich im Körper zeigt. In der Körperarbeit wird spürbar, wo Themen sich festgesetzt haben. Durch Körperberührung und Atem findet das Nervensystem seinen Weg zurück zur Ruhe.
               </p>
               <p>
                 Das ist keine Massage. Es ist eine Kombination aus Coaching, Körperarbeit und psychotherapeutischen Elementen: psychosomatische Körpertherapie in einer Praxis am Ammersee.

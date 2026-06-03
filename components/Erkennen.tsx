@@ -1,12 +1,17 @@
 'use client'
 
+type Item = {
+  kind: 'quote' | 'reflection'
+  text: string
+}
+
 export default function Erkennen() {
-  const lines = [
-    'Du funktionierst. Und manchmal weißt du, dass das nicht alles ist.',
-    'Etwas in dir ist müde geworden vom Verstehen.',
-    'Du spürst es zuerst im Körper — in den Schultern, im Atem, im Schlaf.',
-    'Du möchtest dich nicht reparieren lassen. Du möchtest gehört werden.',
-    'Vielleicht muss nichts gelöst werden. Vielleicht nur gespürt.',
+  const items: Item[] = [
+    { kind: 'quote', text: 'Ich kann nicht mehr runterkommen.' },
+    { kind: 'quote', text: 'Ich spüre meinen Körper nicht mehr.' },
+    { kind: 'quote', text: 'Die Anspannung sitzt seit Jahren. Sie geht nicht weg.' },
+    { kind: 'reflection', text: 'Du verstehst dich gut. Und trotzdem bleibt eine Frage offen.' },
+    { kind: 'reflection', text: 'Vielleicht muss nichts gelöst werden. Vielleicht nur gespürt.' },
   ]
 
   return (
@@ -23,28 +28,41 @@ export default function Erkennen() {
           textAlign: 'center',
         }}
       >
-        {lines.map((line, i) => (
-          <p
-            key={i}
-            className="font-display"
-            style={{
-              color: 'var(--c-text)',
-              fontSize: 'clamp(1.4rem, 2.3vw, 1.85rem)',
-              lineHeight: 1.5,
-              marginBottom:
-                i < lines.length - 1
-                  ? 'clamp(2.5rem, 4.5vw, 3.5rem)'
-                  : 0,
-              fontWeight: 400,
-            }}
-          >
-            {line}
-          </p>
-        ))}
+        {items.map((item, i) => {
+          const next = items[i + 1]
+          const isLastQuoteBeforeReflection =
+            item.kind === 'quote' && next?.kind === 'reflection'
+          const isLastItem = i === items.length - 1
 
+          let marginBottom = 'clamp(2.5rem, 4.5vw, 3.5rem)'
+          if (isLastItem) {
+            marginBottom = 'clamp(4rem, 7vw, 5rem)'
+          } else if (isLastQuoteBeforeReflection) {
+            marginBottom = 'clamp(3.5rem, 6vw, 4.5rem)'
+          }
+
+          const displayText =
+            item.kind === 'quote' ? `„${item.text}“` : item.text
+
+          return (
+            <p
+              key={i}
+              className="font-display"
+              style={{
+                color: 'var(--c-text)',
+                fontSize: 'clamp(1.4rem, 2.3vw, 1.85rem)',
+                lineHeight: 1.5,
+                marginBottom,
+                fontWeight: 400,
+                fontStyle: item.kind === 'quote' ? 'italic' : 'normal',
+              }}
+            >
+              {displayText}
+            </p>
+          )
+        })}
         <p
           style={{
-            marginTop: 'clamp(4rem, 7vw, 5rem)',
             color: 'var(--c-gold)',
             fontSize: 'clamp(0.75rem, 0.9vw, 0.85rem)',
             letterSpacing: '0.18em',

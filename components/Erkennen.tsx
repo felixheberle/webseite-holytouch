@@ -41,6 +41,18 @@ export default function Erkennen() {
             {line}
           </p>
         ))}
+
+        <p
+          style={{
+            marginTop: 'clamp(4rem, 7vw, 5rem)',
+            color: 'var(--c-gold)',
+            fontSize: 'clamp(0.75rem, 0.9vw, 0.85rem)',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+          }}
+        >
+          Wenn du dich wiedererkennst, bist du hier richtig.
+        </p>
       </div>
     </section>
   )

@@ -28,7 +28,7 @@ export default function Erkennen() {
             key={i}
             className="font-display"
             style={{
-              color: 'var(--c-cream)',
+              color: 'var(--c-text)',
               fontSize: 'clamp(1.4rem, 2.3vw, 1.85rem)',
               lineHeight: 1.5,
               marginBottom:

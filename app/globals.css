@@ -79,7 +79,7 @@ body {
   display: inline-block;
   background: oklch(76% 0.12 88);
   color: oklch(12% 0.01 130);
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: var(--font-eb-garamond), 'EB Garamond', Georgia, serif;
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.14em;

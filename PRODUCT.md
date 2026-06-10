@@ -8,13 +8,13 @@
 
 ## Marken-Kern
 
-> „holytouch ist psychosomatische Körpertherapie für suchende, berufstätige Frauen zwischen 40 und 50, damit sie die körperlichen und psychischen Folgen von Trauma und Stress lösen und wieder in Verbindung mit sich selbst kommen."
+> „holytouch ist Körpertherapie für suchende, berufstätige Frauen zwischen 40 und 50, damit sie die körperlichen und psychischen Folgen von Trauma und Stress lösen und wieder in Verbindung mit sich selbst kommen."
 
 **Tagline (Hero):**
 
 > „Dein Körper zeigt, was dein Verstand nicht sagen kann."
 
-**Methode in Worten:** Eine Mischung aus Coaching, Körperarbeit und psychotherapeutischen Elementen. Auf der Website rechtlich sauber nur als **„psychosomatische Körpertherapie"** oder **„Körpertherapie"** bezeichnet.
+**Methode in Worten:** Eine Mischung aus Coaching, Körperarbeit und tiefen Gesprächen. Auf der Website als **„Körpertherapie"** bezeichnet (nicht-geschützter Begriff). Klinik-nahe Begriffe („psychosomatisch", „psychotherapeutisch", „Symptome") bewusst vermieden.
 
 ---
 
@@ -189,7 +189,7 @@ Praxis in Hechenwang, An den Eichen 14, 86949 Hechenwang. Online-Sessions mögli
 
 ### Marishas Credentials
 
-- **20 Jahre psychosomatische Körpertherapie**
+- **20 Jahre Körpertherapie**
 - **Touch Life Massage** (eine ganzheitliche, achtsame Körperarbeitsmethode)
 - **Expressiv-emotionales Entlastungstraining nach Heinrichs & Swoboda** (eine körperorientierte therapeutische Methode für emotionale Entlastung)
 - **In Ausbildung zur Heilpraktikerin für Psychotherapie** (genau so wörtlich auf der Website stehen lassen)
@@ -246,7 +246,7 @@ Link: `https://calendly.com/holytouch/kennenlerngespraech`
 - Keine Vorher-Nachher-Bilder
 - Vorsicht mit Aussagen wie „lindert Schmerzen" (Beleg nötig)
 - Testimonials dürfen keine konkreten Krankheits-Heilungs-Aussagen enthalten
-- Vor Live-Gang: Fachanwalt für Medizinrecht oder Heilberuferecht eine Stunde drüberschauen lassen (geschätzt 200-600 €)
+- Optionale Absicherung vor Live-Gang: einmalige anwaltliche Kurzeinschätzung (Fachanwalt, ~200-600 €). Kein harter Blocker — Site nutzt bewusst nur nicht-geschützte Begriffe. Risiko-Entscheidung liegt bei Felix/Marisha.
 
 ---
 

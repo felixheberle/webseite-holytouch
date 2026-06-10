@@ -11,11 +11,13 @@
 
 ---
 
-## ⚠️ ZENTRALE RECHTLICHE TATSACHE (heute geklärt)
+## Rechtlicher Kontext (Stand nach Sprach-Bereinigung 28.05.)
 
-**Marisha ist KEINE Heilpraktikerin.** Sie bietet **Coaching mit Körpertherapie** an. Sie ist „In Ausbildung zur Heilpraktikerin für Psychotherapie" (so wörtlich in den Credentials — das ist die korrekte Formulierung für den Ausbildungsstand, kein HP-Anspruch).
+Marisha ist keine Heilpraktikerin — sie bietet **Coaching mit Körpertherapie** an, ist „In Ausbildung zur Heilpraktikerin für Psychotherapie" (so wörtlich in den Credentials, korrekte Formulierung für den Ausbildungsstand).
 
-**Implikation:** Die gesamte „Psychosomatische Körpertherapie am Ammersee"-Positionierung läuft für eine Nicht-HP. PRODUCT.md hat Guardrails nach bestem Wissen eingebaut (kein „Therapie" ohne „Körper-", kein Heilversprechen), aber das ist NICHT anwaltlich verifiziert. Der **Fachanwalt-Check ist dadurch das kritischste Launch-Gate**, nicht optional. „Heilpraktikerin" als nackte Bezeichnung wäre strafrechtlich relevant (§1 HeilprG) — kommt aktuell nirgendwo so vor? Nein, nur als „In Ausbildung zur..." (korrekt).
+Die Site nutzt bewusst nur nicht-geschützte Begriffe: „Körpertherapie" (in DE nicht geschützt), „Coaching", „Körperarbeit", „tiefe Gespräche". Die klinik-nahen Begriffe („psychosomatisch", „psychotherapeutische Elemente", „Symptome") wurden am 28.05. site-weit entfernt. Kein Heilversprechen, keine Therapie-/Heilung-Sprache.
+
+**Anwaltlicher Check ist optionale Absicherung, kein harter Blocker.** PRODUCT.md sieht eine einmalige Kurzeinschätzung vor (Fachanwalt, ~200-600€). Nach gängiger Auffassung ist die Sprache jetzt clean; der Check nimmt Restunsicherheit, ist aber Risiko-Entscheidung von Felix/Marisha. [Unverified] — finale rechtliche Sicherheit kann nur ein Anwalt geben, dies ist keine Rechtsberatung.
 
 ---
 
@@ -32,7 +34,7 @@
 |---|---|---|
 | 1 | Nav/Header | Logo, Phone, „KENNENLERNGESPRÄCH"-Button |
 | 2 | Hero | hero.jpg, Tagline „Dein Körper **zeigt**, was dein Verstand nicht sagen kann." (zeigt = bestätigt gewollt) |
-| 3 | PositioningLine | „Psychosomatische Körpertherapie am Ammersee" |
+| 3 | PositioningLine | „Körpertherapie am Ammersee" |
 | 4 | **Erkennen** (NEU) | Yes-Laddering Option C: 3 Klientinnen-Zitate (italic) → 2 Reflexionen (upright) → gold-uppercase Schluss „Wenn du dich wiedererkennst, bist du hier richtig." Ersetzt alte Yes-Laddering-Section. |
 | 5 | Method („Die Arbeit") | „Behandlung" → „Körperarbeit" geändert. method.jpg |
 | 6 | VerstandKoerper | Helix-SVG, zwei Spalten, Synthese. „Körperbehandlung" → „Körperberührung" (Konsistenz mit Method) |
@@ -52,6 +54,7 @@
 - Email „.com" als korrekt bestätigt (PRODUCT.md sagte „.de", jetzt synced)
 - Angebot-Label → „Begleitung"
 - Impressum: Berufshaftpflicht-Section mit `[[PLATZHALTER: ...]]`-Markern (Marishas Versicherungsdaten ausstehend)
+- „psychosomatisch" site-weit entfernt → „Körpertherapie"; „psychotherapeutische Elemente" → „tiefe Gespräche"; „Symptome" → „körperliche Spannungen" (Positionierung de-klinikalisiert, Marisha-freigegeben)
 
 **Technik:**
 - Font-Konsolidierung: Cormorant Garamond komplett entfernt, alles auf EB Garamond (außer Inkbleed-Sans-Labels)
@@ -81,7 +84,7 @@ cdf4059 Brand-Alignment: Method 'Körperarbeit' + Erkennen Option C
 
 | Punkt | Status |
 |---|---|
-| **Fachanwalt-Check (KRITISCH wg. non-HP-Positionierung)** Impressum + Datenschutz + „Körpertherapie"-Wording | ⏳ OFFEN — Termin jetzt buchen (1-2 Wochen Vorlauf, ~200-600€) |
+| Anwaltliche Kurzeinschätzung (optional, Absicherung) Impressum + Datenschutz | ⏳ optional — kein harter Blocker, ~200-600€, Risiko-Entscheidung Felix/Marisha |
 | Berufshaftpflicht-Daten von Marisha → Platzhalter ersetzen | ⏳ Struktur steht, Daten ausstehend (Versicherer Name+Adresse, Geltungsbereich) |
 | HWG-Compliance-Verifizierung | ⏳ Teil des Anwalts-Checks |
 | Testimonial-Consent schriftlich (3 Klientinnen) | ⏳ Marisha |
@@ -161,7 +164,7 @@ Ein logischer Change = ein Commit. STATUS.md einmal pro Session am Ende.
 20. **„Aktuelle Section zu schwach" in einem Status-Doc heißt ERSETZEN, nicht HINZUFÜGEN.** Fehler diese Session: Erkennen-Section gebaut während alte Yes-Laddering-Section noch da war → Duplikat. Bei „überarbeiten/verbessern" zuerst prüfen ob die alte Version weg muss.
 21. **`[[PLATZHALTER: ...]]`-Marker für unfertige Inhalte + grep-Guard vor Launch.** Niemals nackte TODO-Kommentare die live gehen könnten.
 22. **Claude Code berichtet gelegentlich falsch** — diese Session: garbled Email-Stellen-Report („Zeile 224 zusätzlich zu 224"), und Font-Audit sagte `.font-display → cormorant` obwohl schon EB Garamond. Berichte gegen Diff-Stats / grep verifizieren statt blind glauben.
-23. **non-HP-Positionierung ist die zentrale rechtliche Tatsache.** „Coaching mit Körpertherapie", kein Heilpraktiker. Bei jeder Wording-Frage mitdenken. Anwalt ist Pflicht-Gate, nicht Nice-to-have.
+23. **non-HP ist die rechtliche Grund-Tatsache.** „Coaching mit Körpertherapie", kein Heilpraktiker. Site bewusst auf nicht-geschützte Begriffe ausgelegt. Anwaltlicher Check ist optionale Absicherung, kein Pflicht-Gate. Korrektur aus dieser Session: zwischenzeitlich als „kritisches Launch-Gate" überzeichnet — Pushback war berechtigt. Lehre: rechtliche Sorgen an der tatsächlichen Wortwahl der Site prüfen, nicht pauschal eskalieren.
 
 ---
 
@@ -187,8 +190,9 @@ Lies zuerst STATUS.md (cat STATUS.md), dann gib mir zurück:
 2. Welchen offenen Punkt du zuerst angehen würdest und warum
 3. Offene Fragen vor dem Loslegen
 
-Beachte: Marisha ist KEINE HP (Coaching mit Körpertherapie) — der
-Anwalts-Check ist das kritische Launch-Gate.
+Beachte: Marisha ist keine HP (Coaching mit Körpertherapie). Site nutzt
+bewusst nur nicht-geschützte Begriffe. Anwaltlicher Check ist optionale
+Absicherung, kein harter Blocker.
 
 Workflow: direkt, kein Cushioning, [Unverified] labeln, Annahmen
 herausfordern. Vor Code-Änderungen: git status + ggf. git log --oneline.

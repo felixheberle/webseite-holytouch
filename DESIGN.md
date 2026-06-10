@@ -131,7 +131,7 @@ Vertikal großzügig (5-9rem), horizontal moderater (1.5-3rem).
 
 1. **Nav/Header** — Logo „holy touch / Marisha Sarah" links, Phone + „KENNENLERNGESPRÄCH" rechts
 2. **Hero** — hero.jpg (objectPosition `80% 34%` ❓), Tagline „Dein Körper zeigt, was dein Verstand nicht sagen kann." ⚠️ (PRODUCT.md sagt „weiß" — Drift ungelöst)
-3. **PositioningLine** — „Psychosomatische Körpertherapie am Ammersee" (gold)
+3. **PositioningLine** — „Körpertherapie am Ammersee" (gold)
 4. **Erkennen** (Yes-Laddering) — 3 Klientinnen-Zitate (italic, deutsche Quotes) → 2 Reflexionen (upright) → gold-uppercase Schluss „Wenn du dich wiedererkennst, bist du hier richtig."
 5. **Method** („Die Arbeit") — Headline „Manchmal braucht es mehr als Worte.", drei Absätze (Definition → Mechanismus → Differenzierung), method.jpg
 6. **VerstandKoerper** („Gespräch und Körper") — Headline „In Gespräch und Körper — bis sich beides *berührt*.", zwei Spalten (Gespräch / Körper) mit Helix-SVG dazwischen, Synthese-Statement

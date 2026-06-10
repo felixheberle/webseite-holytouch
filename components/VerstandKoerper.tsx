@@ -145,7 +145,7 @@ export function VerstandKoerper() {
                 margin: '0 auto',
               }}
             >
-              Über Körperbehandlung und Atem wird spürbar, wo innere Themen
+              Über Körperberührung und Atem wird spürbar, wo innere Themen
               sich im Körper ausdrücken.
             </p>
           </div>

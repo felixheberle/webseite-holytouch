@@ -38,7 +38,7 @@ Die Site nutzt bewusst nur nicht-geschützte Begriffe: „Körpertherapie" (in D
 | 4 | **Erkennen** | Yes-Laddering: 3 Klientinnen-Zitate (italic) → gold-uppercase Schluss „Wenn du dich wiedererkennst, bist du hier richtig." (Reflexionszeilen am 10.06. entfernt) |
 | 5 | Method („Die Methode") | Label „Die Arbeit" → „Die Methode". Headline „Manche Themen sitzen so tief im System, dass Worte alleine nicht reichen." Body: Lead + Prozess + Einordnung. method.jpg |
 | 6 | VerstandKoerper | Label/Headline/Spalten auf „Verstand und Körper" (war „Gespräch"). Headline „Wenn Verstand und Körper sich berühren" (berühren italic-gold). Spalten je 3 Begriffe (links Innere Anteile · Trauma · Persönlichkeitsmuster / rechts Massage · Atem · Nervensystem). Synthese „Wenn beides zusammenspielt, wird natürliche Regeneration wieder möglich." |
-| 7 | Marisha | Headline Vorschlag 5, Ich-Stimme, lesbare Credentials. marisha.jpg |
+| 7 | Marisha | Neue Bio (4 Absätze: Ayurveda → TouchLife → Selbsterfahrung → Gesprächsführung → „dass du dich wieder spürst"). Headline „Warum mich der Körper nie losgelassen hat." Credential „Touch Life" → „TouchLife Massage" (Schreibweise vereinheitlicht). marisha.jpg |
 | 8 | **Begleitung** (umbenannt) | Section-Label „Angebot" → „Begleitung". Headline „So arbeiten wir zusammen." Lineare Preise (Anamnese 2h/200€, Einzelsitzung 1h/100€·1,5h/150€·2h/200€) |
 | 9 | Erfahrungen | 3 Testimonials (Susann B., Maike D., Claudia B.) |
 | 10 | CTA | „Zwanzig Minuten reichen..." + Olivgold-Button + Kontakt |
@@ -56,6 +56,7 @@ Die Site nutzt bewusst nur nicht-geschützte Begriffe: „Körpertherapie" (in D
 - Impressum: Berufshaftpflicht-Section mit `[[PLATZHALTER: ...]]`-Markern (Marishas Versicherungsdaten ausstehend)
 - „psychosomatisch" site-weit entfernt → „Körpertherapie"; „psychotherapeutische Elemente" → „tiefe Gespräche"; „Symptome" → „körperliche Spannungen" (Positionierung de-klinikalisiert, Marisha-freigegeben)
 - Sektion-Strecke überarbeitet (10.06.): Erkennen gekürzt (nur Zitate + Schluss), VerstandKoerper umbenannt Gespräch→Verstand + neue Headline + Synthese + Spalten symmetrisch je 3, Method neu (Die Methode, neue Headline, gestraffter Body). Reihenfolge final: Erkennen → Method → VerstandKoerper.
+- Marisha-Section neu (10.06.): vier-Absatz-Bio (Ayurveda/TouchLife/Gesprächsführung statt alter Kurz-Bio), Headline „Warum mich der Körper nie losgelassen hat.", TouchLife-Schreibweise vereinheitlicht (Bio + Credential).
 
 **Technik:**
 - Font-Konsolidierung: Cormorant Garamond komplett entfernt, alles auf EB Garamond (außer Inkbleed-Sans-Labels)

@@ -1,6 +1,6 @@
 # Holytouch Website — Stand & nächste Schritte
 
-**Datum:** 28. Mai 2026 (Update nach erweiterter Session: Yes-Laddering, Font-Konsolidierung, Vercel-Staging, Brand-Entscheidungen, non-HP-Klärung)
+**Datum:** 10. Juni 2026 (Sektion-Strecke überarbeitet: Erkennen/Method/VerstandKoerper Copy + Reihenfolge)
 **Projektordner:** `/Users/felixheberle/Desktop/webseite-holytouch/`
 **Dev-Server:** localhost:3003 (oder :3004 falls belegt)
 **Workflow:** Mac-App (Strategie) + Claude Code Terminal (Execution)
@@ -35,9 +35,9 @@ Die Site nutzt bewusst nur nicht-geschützte Begriffe: „Körpertherapie" (in D
 | 1 | Nav/Header | Logo, Phone, „KENNENLERNGESPRÄCH"-Button |
 | 2 | Hero | hero.jpg, Tagline „Dein Körper **zeigt**, was dein Verstand nicht sagen kann." (zeigt = bestätigt gewollt) |
 | 3 | PositioningLine | „Körpertherapie am Ammersee" |
-| 4 | **Erkennen** (NEU) | Yes-Laddering Option C: 3 Klientinnen-Zitate (italic) → 2 Reflexionen (upright) → gold-uppercase Schluss „Wenn du dich wiedererkennst, bist du hier richtig." Ersetzt alte Yes-Laddering-Section. |
-| 5 | Method („Die Arbeit") | „Behandlung" → „Körperarbeit" geändert. method.jpg |
-| 6 | VerstandKoerper | Helix-SVG, zwei Spalten, Synthese. „Körperbehandlung" → „Körperberührung" (Konsistenz mit Method) |
+| 4 | **Erkennen** | Yes-Laddering: 3 Klientinnen-Zitate (italic) → gold-uppercase Schluss „Wenn du dich wiedererkennst, bist du hier richtig." (Reflexionszeilen am 10.06. entfernt) |
+| 5 | Method („Die Methode") | Label „Die Arbeit" → „Die Methode". Headline „Manche Themen sitzen so tief im System, dass Worte alleine nicht reichen." Body: Lead + Prozess + Einordnung. method.jpg |
+| 6 | VerstandKoerper | Label/Headline/Spalten auf „Verstand und Körper" (war „Gespräch"). Headline „Wenn Verstand und Körper sich berühren" (berühren italic-gold). Spalten je 3 Begriffe (links Innere Anteile · Trauma · Persönlichkeitsmuster / rechts Massage · Atem · Nervensystem). Synthese „Wenn beides zusammenspielt, wird natürliche Regeneration wieder möglich." |
 | 7 | Marisha | Headline Vorschlag 5, Ich-Stimme, lesbare Credentials. marisha.jpg |
 | 8 | **Begleitung** (umbenannt) | Section-Label „Angebot" → „Begleitung". Headline „So arbeiten wir zusammen." Lineare Preise (Anamnese 2h/200€, Einzelsitzung 1h/100€·1,5h/150€·2h/200€) |
 | 9 | Erfahrungen | 3 Testimonials (Susann B., Maike D., Claudia B.) |
@@ -55,6 +55,7 @@ Die Site nutzt bewusst nur nicht-geschützte Begriffe: „Körpertherapie" (in D
 - Angebot-Label → „Begleitung"
 - Impressum: Berufshaftpflicht-Section mit `[[PLATZHALTER: ...]]`-Markern (Marishas Versicherungsdaten ausstehend)
 - „psychosomatisch" site-weit entfernt → „Körpertherapie"; „psychotherapeutische Elemente" → „tiefe Gespräche"; „Symptome" → „körperliche Spannungen" (Positionierung de-klinikalisiert, Marisha-freigegeben)
+- Sektion-Strecke überarbeitet (10.06.): Erkennen gekürzt (nur Zitate + Schluss), VerstandKoerper umbenannt Gespräch→Verstand + neue Headline + Synthese + Spalten symmetrisch je 3, Method neu (Die Methode, neue Headline, gestraffter Body). Reihenfolge final: Erkennen → Method → VerstandKoerper.
 
 **Technik:**
 - Font-Konsolidierung: Cormorant Garamond komplett entfernt, alles auf EB Garamond (außer Inkbleed-Sans-Labels)

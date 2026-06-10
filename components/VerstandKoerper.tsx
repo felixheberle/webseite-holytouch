@@ -132,8 +132,10 @@ export function VerstandKoerper() {
               className="section-label"
               style={{ marginBottom: '1.5rem' }}
             >
-              <span style={{ whiteSpace: 'nowrap' }}>Berührung Massage ·</span>{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>Atem Nervensystem</span>
+              <span style={{ whiteSpace: 'nowrap' }}>Berührung ·</span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>Massage ·</span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>Atem ·</span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>Nervensystem</span>
             </p>
             <p
               style={{

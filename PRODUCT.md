@@ -12,7 +12,7 @@
 
 **Tagline (Hero):**
 
-> „Dein Körper weiß, was dein Verstand nicht sagen kann."
+> „Dein Körper zeigt, was dein Verstand nicht sagen kann."
 
 **Methode in Worten:** Eine Mischung aus Coaching, Körperarbeit und psychotherapeutischen Elementen. Auf der Website rechtlich sauber nur als **„psychosomatische Körpertherapie"** oder **„Körpertherapie"** bezeichnet.
 
@@ -221,7 +221,7 @@ Link: `https://calendly.com/holytouch/kennenlerngespraech`
 ### Sekundär (weniger prominent)
 
 - Anruf direkt: 08152 / 4809056 (als `tel:`-Link klickbar)
-- E-Mail: `marisha@holytouch.de`
+- E-Mail: `marisha@holytouch.com`
 
 ### Tertiär (Footer-Bereich)
 

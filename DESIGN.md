@@ -199,7 +199,7 @@ Wenn du diese Dateien per `cat` durchgibst, ergänze ich die ❓-Stellen mit ver
 | Punkt | PRODUCT.md | Implementiert | Status |
 |---|---|---|---|
 | Hintergrundfarbe | warmes Schwarz #0F0E0D | dunkles Olivgrün oklch(18% 0.05 130) | bewusste Evolution, PRODUCT.md stale |
-| Hero-Tagline | „Dein Körper **weiß**..." | „Dein Körper **zeigt**..." | ⚠️ ungelöst — Entscheidung offen |
+| Hero-Tagline | „Dein Körper **weiß**..." | „Dein Körper **zeigt**..." | ✅ 'zeigt' bestätigt als gewollt, PRODUCT.md aktualisiert |
 | Display-Font | Inkbleed Sans (nur Display) | Inkbleed Sans (Labels) + EB Garamond (Headlines) | Headlines nutzen EB Garamond, nicht Inkbleed |
 | Angebot-Struktur | Begleitungs-Pakete (4/8 Termine, rabattiert) | Lineare Einzelpreise | bewusste Abweichung |
-| E-Mail | marisha@holytouch.**de** | marisha@holytouch.**com** | ⚠️ ungelöst — Verifikation offen |
+| E-Mail | marisha@holytouch.**de** | marisha@holytouch.**com** | ✅ '.com' bestätigt, PRODUCT.md aktualisiert |

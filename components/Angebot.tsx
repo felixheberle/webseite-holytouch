@@ -48,7 +48,7 @@ export function Angebot() {
             className="section-label"
             style={{ color: 'oklch(67% 0.08 88)', marginBottom: '2rem' }}
           >
-            Angebot
+            Begleitung
           </p>
 
           <h2

@@ -18,8 +18,8 @@ export default function HomePage() {
         <Hero />
         <PositioningLine />
         <Erkennen />
-        <Method />
         <VerstandKoerper />
+        <Method />
         <Marisha />
         <Angebot />
         <Erfahrungen />

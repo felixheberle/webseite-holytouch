@@ -164,8 +164,8 @@ export function VerstandKoerper() {
             fontStyle: 'italic',
           }}
         >
-          Wo beides sich berührt, entsteht eine durchgängige,
-          körperlich gespürte Aufmerksamkeit.
+          Wenn beides zusammenspielt, wird natürliche Regeneration
+          wieder möglich.
         </p>
       </FadeIn>
     </section>

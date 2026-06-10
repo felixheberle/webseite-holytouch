@@ -36,7 +36,7 @@ export function Method() {
         >
           <FadeIn>
             <p className="section-label" style={{ marginBottom: '2rem' }}>
-              Die Arbeit
+              Die Methode
             </p>
 
             <h2
@@ -48,9 +48,7 @@ export function Method() {
                 marginBottom: '2.5rem',
               }}
             >
-              Manchmal braucht es
-              <br />
-              mehr als Worte.
+              Manche Themen sitzen so tief im System, dass Worte alleine nicht reichen.
             </h2>
 
             <div
@@ -62,13 +60,13 @@ export function Method() {
               }}
             >
               <p style={{ marginBottom: '2rem' }}>
-                Körpertherapie verbindet Gespräch und Körperarbeit. Manche Themen sitzen so tief im Körper, dass Worte allein sie nicht erreichen.
+                Körpertherapie verbindet Gespräch und Körperarbeit.
               </p>
               <p style={{ marginBottom: '2rem' }}>
                 Im Gespräch richten wir den Blick auf das, was sich im Körper zeigt. In der Körperarbeit wird spürbar, wo Themen sich festgesetzt haben. Durch Körperberührung und Atem findet das Nervensystem seinen Weg zurück zur Ruhe.
               </p>
               <p>
-                Das ist keine Massage. Es ist eine Kombination aus Coaching, Körperarbeit und tiefen Gesprächen: Körpertherapie in einer Praxis am Ammersee.
+                Es ist eine Kombination aus Coaching, Körperarbeit und tiefen Gesprächen.
               </p>
             </div>
           </FadeIn>

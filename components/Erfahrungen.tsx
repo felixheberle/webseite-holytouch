@@ -31,39 +31,44 @@ export default function Erfahrungen() {
           Erfahrungen
         </p>
 
-        {testimonials.map((t, i) => (
-          <blockquote
-            key={i}
-            style={{
-              textAlign: 'center',
-              maxWidth: i === 0 ? '42ch' : i === 1 ? '34ch' : '28ch',
-              margin: i === 0 ? '0 auto' : 'clamp(4rem, 8vw, 6.5rem) auto 0',
-            }}
-          >
-            <p
-              className="font-display"
+        {testimonials.map((t, i) => {
+          const alignRight = i % 2 === 1
+          return (
+            <blockquote
+              key={i}
               style={{
-                color: 'var(--c-text)',
-                fontSize: 'clamp(1.4rem, 2.4vw, 2rem)',
-                lineHeight: 1.45,
-                fontStyle: 'italic',
-                marginBottom: '1.5rem',
+                textAlign: alignRight ? 'right' : 'left',
+                maxWidth: i === 0 ? '42ch' : i === 1 ? '38ch' : '34ch',
+                marginLeft: alignRight ? 'auto' : 0,
+                marginRight: alignRight ? 0 : 'auto',
+                marginTop: i === 0 ? 0 : 'clamp(4rem, 8vw, 6.5rem)',
               }}
             >
-              „{t.quote}"
-            </p>
-            <cite
-              style={{
-                color: 'var(--c-gold)',
-                fontSize: 'clamp(0.8rem, 1vw, 0.95rem)',
-                fontStyle: 'normal',
-                letterSpacing: '0.05em',
-              }}
-            >
-              — {t.name}
-            </cite>
-          </blockquote>
-        ))}
+              <p
+                className="font-display"
+                style={{
+                  color: 'var(--c-text)',
+                  fontSize: 'clamp(1.4rem, 2.4vw, 2rem)',
+                  lineHeight: 1.45,
+                  fontStyle: 'italic',
+                  marginBottom: '1.5rem',
+                }}
+              >
+                „{t.quote}"
+              </p>
+              <cite
+                style={{
+                  color: 'var(--c-gold)',
+                  fontSize: 'clamp(0.8rem, 1vw, 0.95rem)',
+                  fontStyle: 'normal',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                — {t.name}
+              </cite>
+            </blockquote>
+          )
+        })}
       </div>
     </section>
   )

@@ -37,7 +37,7 @@ export function Marisha() {
                 marginBottom: '2.5rem',
               }}
             >
-              Über zwanzig Jahre Verstand und Körper
+              Warum mich der Körper nie losgelassen hat.
             </h2>
 
             <div

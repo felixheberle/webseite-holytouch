@@ -38,7 +38,7 @@ export default function Erfahrungen() {
               key={i}
               style={{
                 textAlign: alignRight ? 'right' : 'left',
-                maxWidth: i === 0 ? '42ch' : i === 1 ? '38ch' : '34ch',
+                maxWidth: i === 0 ? '52ch' : i === 1 ? '46ch' : '40ch',
                 marginLeft: alignRight ? 'auto' : 0,
                 marginRight: alignRight ? 0 : 'auto',
                 marginTop: i === 0 ? 0 : 'clamp(4rem, 8vw, 6.5rem)',

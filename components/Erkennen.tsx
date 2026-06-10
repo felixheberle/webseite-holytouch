@@ -10,8 +10,6 @@ export default function Erkennen() {
     { kind: 'quote', text: 'Ich kann nicht mehr runterkommen.' },
     { kind: 'quote', text: 'Ich spüre meinen Körper nicht mehr.' },
     { kind: 'quote', text: 'Die Anspannung sitzt seit Jahren. Sie geht nicht weg.' },
-    { kind: 'reflection', text: 'Du verstehst dich gut. Und trotzdem bleibt eine Frage offen.' },
-    { kind: 'reflection', text: 'Vielleicht muss nichts gelöst werden. Vielleicht nur gespürt.' },
   ]
 
   return (

@@ -11,9 +11,9 @@ const ebGaramond = EB_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'holytouch — Psychosomatische Körpertherapie am Ammersee',
+  title: 'holytouch — Körpertherapie am Ammersee',
   description:
-    'Psychosomatische Körpertherapie für berufstätige Frauen. Körpertherapeutin Marisha Pommerenke, Praxis in Hechenwang am Ammersee.',
+    'Körpertherapie für berufstätige Frauen. Körpertherapeutin Marisha Pommerenke, Praxis in Hechenwang am Ammersee.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

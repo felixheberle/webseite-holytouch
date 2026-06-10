@@ -81,8 +81,8 @@ export function VerstandKoerper() {
                 margin: '0 auto',
               }}
             >
-              Wir richten den Blick auf innere Anteile, psychosomatische
-              Symptome, Persönlichkeitsmuster und unverarbeitete Erlebnisse.
+              Wir richten den Blick auf innere Anteile, körperliche Spannungen,
+              Persönlichkeitsmuster und unverarbeitete Erlebnisse.
             </p>
           </div>
 

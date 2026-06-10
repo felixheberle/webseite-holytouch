@@ -19,7 +19,7 @@ export function PositioningLine() {
           margin: 0,
         }}
       >
-        Psychosomatische Körpertherapie am Ammersee
+        Körpertherapie am Ammersee
       </p>
     </section>
   )

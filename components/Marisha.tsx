@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FadeIn } from './FadeIn'
 
 const credentials = [
-  '20 Jahre psychosomatische Körpertherapie',
+  '20 Jahre Körpertherapie',
   'Touch Life Massage',
   'Expressiv-emotionales Entlastungstraining nach Heinrichs & Swoboda',
   'In Ausbildung zur Heilpraktikerin für Psychotherapie',

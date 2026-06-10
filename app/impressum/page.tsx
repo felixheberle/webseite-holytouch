@@ -39,15 +39,18 @@ export default function ImpressumPage() {
         </p>
       </section>
 
-      {/* TODO: Vor Live-Gang ergänzen — Berufshaftpflichtversicherung
       <section>
         <h2>Berufshaftpflichtversicherung</h2>
         <p>
-          [Versicherer einsetzen]<br />
-          Geltungsbereich: Deutschland
+          Name und Sitz des Versicherers:<br />
+          [[PLATZHALTER: Name der Versicherung]]<br />
+          [[PLATZHALTER: Straße, PLZ Ort]]
+        </p>
+        <p>
+          Räumlicher Geltungsbereich der Versicherung:<br />
+          [[PLATZHALTER: z. B. Deutschland]]
         </p>
       </section>
-      */}
 
       <section>
         <h2>Bildnachweise</h2>

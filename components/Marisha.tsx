@@ -3,7 +3,7 @@ import { FadeIn } from './FadeIn'
 
 const credentials = [
   '20 Jahre Körpertherapie',
-  'Touch Life Massage',
+  'TouchLife Massage',
   'Expressiv-emotionales Entlastungstraining nach Heinrichs & Swoboda',
   'In Ausbildung zur Heilpraktikerin für Psychotherapie',
 ]
@@ -37,9 +37,7 @@ export function Marisha() {
                 marginBottom: '2.5rem',
               }}
             >
-              Zwanzig Jahre.
-              <br />
-              Sich im eigenen Körper wieder spüren.
+              Über zwanzig Jahre Verstand und Körper
             </h2>
 
             <div
@@ -52,10 +50,16 @@ export function Marisha() {
               }}
             >
               <p style={{ marginBottom: '2rem' }}>
-                Ich habe über die Jahre verschiedene Therapie- und Gruppenformen ausprobiert. Sie kamen alle an einen Punkt, an dem sie nicht weiterführten, weil Berührung darin keinen Raum hatte. Es fühlte sich falsch an, einer Person, die drei, vier Meter entfernt saß, das Intimste zu erzählen.
+                Ich bin mit Ayurveda aufgewachsen. Mit 19 habe ich meine Ausbildung an der TouchLife Schule gemacht — und schon dort ging es um mehr als Berührung allein: um das Begleiten von Prozessen.
+              </p>
+              <p style={{ marginBottom: '2rem' }}>
+                Denn wenn wir berührt werden, passiert etwas mit uns. Genau das hat mich nie wieder losgelassen: Wie hängen Körper und Gefühl zusammen?
+              </p>
+              <p style={{ marginBottom: '2rem' }}>
+                Über die Jahre habe ich viel Selbsterfahrung gesammelt, in Gruppen- und Einzelarbeit. Irgendwann wollte ich das, was zwischen Worten und Körper entsteht, bewusster nutzen — also habe ich Gesprächsführung gelernt und dem Reden in meiner Arbeit mehr Raum gegeben. So bringe ich das Gesagte in direkte Verbindung mit dem, was du fühlst und im Körper spürst.
               </p>
               <p>
-                Daraus ist meine Arbeit entstanden: Klientinnen wieder dahin zu führen, sich im eigenen Körper zu spüren. Präsent zu sein. Sicher zu sein.
+                Mir geht es darum, dass du dich in deinem eigenen Körper wieder spürst. Präsent. Sicher. Und dass du verstehst, was dein Körper dir zeigt.
               </p>
             </div>
 

@@ -113,7 +113,7 @@ LEER sein. Solange Treffer → nicht launch-ready.
 
 ### Noch offen
 - **P2 Bio-Story-Erweiterung** Marisha-Sektion (Marisha-Input)
-- **Berufsbezeichnungs-Konsistenz prüfen** im Licht der non-HP-Klärung — der Anwalt klärt ob „Körpertherapeutin"/„psychosomatische Körpertherapie" für Nicht-HP haltbar ist oder umformuliert werden muss
+- **Berufsbezeichnungs-Konsistenz** — „psychosomatisch" wurde entfernt (28.05.), Site führt nur noch „Körpertherapie"/„Körpertherapeutin". Falls anwaltliche Kurzeinschätzung erfolgt, kann sie „Körpertherapeutin" als Restpunkt mitprüfen.
 
 ---
 

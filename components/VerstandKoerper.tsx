@@ -28,14 +28,14 @@ export function VerstandKoerper() {
             margin: '0 auto 5rem',
           }}
         >
-          In Gespräch und Körper — bis sich beides{' '}
+          Wenn Verstand und Körper sich{' '}
           <em
             style={{
               color: 'oklch(67% 0.08 88)',
               fontStyle: 'italic',
             }}
           >
-            berührt
+            berühren
           </em>
           .
         </h2>

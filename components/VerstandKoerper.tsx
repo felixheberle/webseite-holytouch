@@ -13,7 +13,7 @@ export function VerstandKoerper() {
           className="section-label"
           style={{ textAlign: 'center', marginBottom: '3rem' }}
         >
-          Gespräch und Körper
+          Verstand und Körper
         </p>
 
         {/* Headline */}
@@ -61,7 +61,7 @@ export function VerstandKoerper() {
                 marginBottom: '0.75rem',
               }}
             >
-              Gespräch
+              Verstand
             </h3>
             <p
               className="section-label"

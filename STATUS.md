@@ -1,211 +1,204 @@
 # Holytouch Website — Stand & nächste Schritte
 
-**Datum:** 28. Mai 2026 (Update nach Design-/Section-/GitHub-/Performance-Session)
+**Datum:** 28. Mai 2026 (Update nach erweiterter Session: Yes-Laddering, Font-Konsolidierung, Vercel-Staging, Brand-Entscheidungen, non-HP-Klärung)
 **Projektordner:** `/Users/felixheberle/Desktop/webseite-holytouch/`
-**Dev-Server:** localhost:3003 (oder :3004 falls 3003 belegt)
+**Dev-Server:** localhost:3003 (oder :3004 falls belegt)
 **Workflow:** Mac-App (Strategie) + Claude Code Terminal (Execution)
-**Git:** Branch `main`, 11+ Commits, lokal sauber + auf GitHub gepusht
+**Git:** Branch `main`, sauber, letzter Commit `c98fbc8`
 **GitHub:** `https://github.com/felixheberle/webseite-holytouch` (private)
-**Auth:** GitHub CLI (`gh auth login`, OAuth via Browser, kein Token-Hantieren)
+**Vercel-Staging:** `https://webseite-holytouch.vercel.app` (live, Auto-Deploy bei push auf main)
+**Auth:** GitHub CLI (`gh auth login`, Browser-OAuth)
+
+---
+
+## ⚠️ ZENTRALE RECHTLICHE TATSACHE (heute geklärt)
+
+**Marisha ist KEINE Heilpraktikerin.** Sie bietet **Coaching mit Körpertherapie** an. Sie ist „In Ausbildung zur Heilpraktikerin für Psychotherapie" (so wörtlich in den Credentials — das ist die korrekte Formulierung für den Ausbildungsstand, kein HP-Anspruch).
+
+**Implikation:** Die gesamte „Psychosomatische Körpertherapie am Ammersee"-Positionierung läuft für eine Nicht-HP. PRODUCT.md hat Guardrails nach bestem Wissen eingebaut (kein „Therapie" ohne „Körper-", kein Heilversprechen), aber das ist NICHT anwaltlich verifiziert. Der **Fachanwalt-Check ist dadurch das kritischste Launch-Gate**, nicht optional. „Heilpraktikerin" als nackte Bezeichnung wäre strafrechtlich relevant (§1 HeilprG) — kommt aktuell nirgendwo so vor? Nein, nur als „In Ausbildung zur..." (korrekt).
 
 ---
 
 ## Was sitzt
 
 ### Globales Design-System
-- **Hintergrund:** Olivgrün `oklch(18% 0.05 130)` durchgängig auf allen Sections
-- **Fonts:** Cormorant Garamond (Display/Headlines, Button-Labels, Preise), EB Garamond (Body + Legal Pages)
-- **Akzentfarbe:** Olivgold `var(--c-gold)` ≈ `oklch(67% 0.08 88)`
-- **Cream/Body-Text:** `oklch(93% 0.012 85)`
+- **Hintergrund:** dunkles Olivgrün `oklch(18% 0.05 130)` (Abweichung von PRODUCT.md das „warmes Schwarz" sagt — Olivgrün ist die tatsächliche Brand-Farbe)
+- **Fonts (nach Konsolidierung 28.05.):** Inkbleed Sans (self-hosted, Section-Labels + Legal-h2) + EB Garamond (alles andere: Body + Headlines). **Cormorant Garamond entfernt.**
+- **Akzent:** Olivgold `var(--c-gold)` = `oklch(67% 0.08 88)`, Cream-Text `oklch(93% 0.012 85)`
+- Vollständige Token-Liste + Section-Specs siehe **DESIGN.md** (neu im Repo)
 
-### Section-Status
-| Section | Status |
+### Section-Status (Reihenfolge wie live)
+| # | Section | Status |
+|---|---|---|
+| 1 | Nav/Header | Logo, Phone, „KENNENLERNGESPRÄCH"-Button |
+| 2 | Hero | hero.jpg, Tagline „Dein Körper **zeigt**, was dein Verstand nicht sagen kann." (zeigt = bestätigt gewollt) |
+| 3 | PositioningLine | „Psychosomatische Körpertherapie am Ammersee" |
+| 4 | **Erkennen** (NEU) | Yes-Laddering Option C: 3 Klientinnen-Zitate (italic) → 2 Reflexionen (upright) → gold-uppercase Schluss „Wenn du dich wiedererkennst, bist du hier richtig." Ersetzt alte Yes-Laddering-Section. |
+| 5 | Method („Die Arbeit") | „Behandlung" → „Körperarbeit" geändert. method.jpg |
+| 6 | VerstandKoerper | Helix-SVG, zwei Spalten, Synthese. „Körperbehandlung" → „Körperberührung" (Konsistenz mit Method) |
+| 7 | Marisha | Headline Vorschlag 5, Ich-Stimme, lesbare Credentials. marisha.jpg |
+| 8 | **Begleitung** (umbenannt) | Section-Label „Angebot" → „Begleitung". Headline „So arbeiten wir zusammen." Lineare Preise (Anamnese 2h/200€, Einzelsitzung 1h/100€·1,5h/150€·2h/200€) |
+| 9 | Erfahrungen | 3 Testimonials (Susann B., Maike D., Claudia B.) |
+| 10 | CTA | „Zwanzig Minuten reichen..." + Olivgold-Button + Kontakt |
+| 11 | Footer | Logo 56px, Impressum/Datenschutz/Instagram, Copyright |
+
+### Eingriffe in dieser erweiterten Session (28. Mai)
+
+**Content/Brand:**
+- Erkennen-Section (Yes-Laddering) neu gebaut, Option C (3 Klientinnen-Zitate + 2 Reflexionen + Schluss)
+- Method „Behandlung" → „Körperarbeit"
+- VerstandKoerper „Körperbehandlung" → „Körperberührung"
+- Hero-Tagline „zeigt" als gewollt bestätigt (PRODUCT.md sagte „weiß", jetzt synced)
+- Email „.com" als korrekt bestätigt (PRODUCT.md sagte „.de", jetzt synced)
+- Angebot-Label → „Begleitung"
+- Impressum: Berufshaftpflicht-Section mit `[[PLATZHALTER: ...]]`-Markern (Marishas Versicherungsdaten ausstehend)
+
+**Technik:**
+- Font-Konsolidierung: Cormorant Garamond komplett entfernt, alles auf EB Garamond (außer Inkbleed-Sans-Labels)
+- Vercel-Staging-Deploy aufgesetzt (Hobby-Plan, Auto-Deploy bei push)
+- DESIGN.md erstellt — technische Design-Spezifikation
+
+**Verifiziert/abgehakt:**
+- Email-Konsistenz site-wide: alle `.com`, keine `.de`-Reste (Datenschutz 2×, Impressum 1×, CTASection 2×) → **Pre-Launch-Blocker erledigt**
+
+### Letzte Commits (chronologisch, neueste oben)
+```
+c98fbc8 Impressum: Berufshaftpflicht-Section mit Platzhaltern
+9853250 Angebot-Section: Label 'Angebot' → 'Begleitung'
+28f8b5e VerstandKoerper: 'Körperbehandlung' → 'Körperberührung'
+8657ed2 Doku-Sync: Hero-Tagline 'zeigt' und E-Mail '.com'
+8cb3cfa DESIGN.md: technische Design-Spezifikation
+00b7f4f Font-Konsolidierung: Cormorant entfernt → EB Garamond
+cdf4059 Brand-Alignment: Method 'Körperarbeit' + Erkennen Option C
+3e5f1cc Yes-Laddering: Erkennen-Section (--c-text)
+8b01b5b STATUS-Update nach Session (Verstand-Körper + GitHub + Bildopt)
+... (frühere: Bildoptimierung, GitHub-Setup, VerstandKoerper, CTA, Marisha, Git-Init)
+```
+
+---
+
+## Pre-Launch Blocker
+
+| Punkt | Status |
 |---|---|
-| Hero | hero.jpg, objectPosition `80% 34%`, Cormorant-Tagline. Foto optimiert auf 462KB. |
-| Methode | Drei-Absatz-Struktur (Definition → Mechanismus → Differenzierung). Foto 517KB. |
-| **Verstand-Körper** (NEU) | Editorial V01-Layout (zentriert) mit Helix-SVG-Symbol zwischen zwei Spalten. Headline „In Gespräch und Körper — bis sich beides *berührt*." mit italic-gold-„berührt". Subtitle-Wrap-Bug-Fix via nowrap-Spans pro Phrase. Synthese-Statement als Sub-Headline-Größe. Felix hat Inhalt rechte Spalte angepasst (Berührung Massage · Atem Nervensystem). |
-| Marisha | „ÜBER MARISHA"-Label. Headline (Vorschlag 5): „Zwanzig Jahre. Sich im eigenen Körper wieder spüren." Body auf Ich-Stimme („Ich habe..." statt „Marisha hat..."). Credentials-Liste mit lesbarer Cream-Mixed-Case-Styling (section-label-Klasse entfernt), goldene Dash-Bullets bleiben. Foto 497KB. |
-| Angebot | Anamnese + Einzelsitzung-Gruppe (3 Varianten), lineare Preise €100/h, keine Discount-Mechanik |
-| Erfahrungen | Drei Karten: Susann B., Maike D., Claudia B. — Sterne, Cormorant-Zitate, „Google Rezension"-Footer, Footer-Alignment via `marginTop: auto` |
-| CTA-Section | Olivgrün ohne Bild, Solid Olivgold-Button (Stufe 2: leuchtenderer Background `oklch(76% 0.12 88)`, größeres Padding 1.5rem 3.5rem, größere Schrift 0.95rem), Cormorant-Label. Headline „Zwanzig Minuten reichen, um zu spüren,<br />ob ich die Richtige bin." Foto cta-bg 1.3MB. |
-| Footer | Logo 56px voll-opacity, Links olivgold, Copyright „© 2026 HolyTouch · Praxis am Ammersee" |
-| Impressum | Mit echten Daten gefüllt: Hechenwang-Adresse, Kleinunternehmerin §19 UStG, Vercel-Adresse, EB Garamond Body |
-| Datenschutz | Mit echten Daten gefüllt |
+| **Fachanwalt-Check (KRITISCH wg. non-HP-Positionierung)** Impressum + Datenschutz + „Körpertherapie"-Wording | ⏳ OFFEN — Termin jetzt buchen (1-2 Wochen Vorlauf, ~200-600€) |
+| Berufshaftpflicht-Daten von Marisha → Platzhalter ersetzen | ⏳ Struktur steht, Daten ausstehend (Versicherer Name+Adresse, Geltungsbereich) |
+| HWG-Compliance-Verifizierung | ⏳ Teil des Anwalts-Checks |
+| Testimonial-Consent schriftlich (3 Klientinnen) | ⏳ Marisha |
+| Yes-Laddering Veto-Check durch Marisha (Option C ohne ihr finales OK gebaut) | ⏳ Marisha — Screenshot zeigen, fragen ob ein Satz nicht stimmt |
+| ~~Email-Konsistenz site-wide~~ | ✅ Erledigt 28.05. (alle .com) |
+| ~~Bildoptimierung~~ | ✅ Erledigt 28.05. (~15× kleiner) |
+| ~~GitHub-Remote / Off-Site-Backup~~ | ✅ Erledigt 28.05. |
+| ~~Git-Repo-Init~~ | ✅ Erledigt 25.05. |
 
-### Eingriffe in der heutigen Session (28. Mai 2026)
-
-**Design & Content:**
-- Marisha-Headline auf Vorschlag 5 gesetzt: „Zwanzig Jahre. Sich im eigenen Körper wieder spüren."
-- Marisha-Body auf Ich-Stimme umgestellt
-- Credentials-Liste lesbar gemacht: `section-label`-Klasse entfernt, explizites Cream-Mixed-Case-Styling, goldene Dash-Bullets bleiben
-- CTA-Button Stufe 2: heller/saturierter Gold-Background, größeres Padding, mehr Letter-Spacing
-- **Verstand-Körper-Section komplett neu gebaut** (`components/VerstandKoerper.tsx`):
-  - v0.dev V01-Layout adaptiert (zentriertes Editorial mit Helix-Symbol)
-  - Marishas Inhalte (Innere Anteile · Trauma · Persönlichkeitsmuster / Massage · Nervensystem · Atem) integriert (rechte Spalte später von Felix angepasst)
-  - Synthese-Statement: „Wo beides sich berührt, entsteht eine durchgängige, körperlich gespürte Aufmerksamkeit."
-  - Helix-SVG direkt aus v0 extrahiert via Inspect (exakte Pfade)
-  - Mehrere Iterationen: Spalten-Alignment, Helix-Größe, Body-Font-Größe, Synthese-Größe als Sub-Headline
-  - Subtitle-Wrap-Bug-Fix via nowrap-Spans pro Phrase (jede Phrase + ihr · als geschlossene Einheit, dazwischen normale Wrap-Points)
-
-**Git/Infrastruktur:**
-- GitHub-Repo `webseite-holytouch` (private) angelegt + per `gh auth login` verknüpft
-- Initial-Push: alle 148 Objekte (~50 MiB) gepusht
-- `git remote set-head origin -a` ausgeführt → `origin/HEAD` zeigt auf `main` (sonst `/security-review` broken)
-- `/security-review` läuft erfolgreich („No security vulnerabilities found")
-
-**Performance (Bilder):**
-- **hero-v2.jpg gelöscht** (Dead Asset seit Compare-Hero-Entfernung, 8.6 MB)
-- **4 Fotos via macOS `sips` komprimiert** (max 2400px lange Seite, JPEG Q75):
-  - cta-bg.jpg: 13.2MB → 1.3MB
-  - method.jpg: 10.4MB → 517KB
-  - marisha.jpg: 10.0MB → 497KB
-  - hero.jpg: 9.7MB → 462KB
-  - **Total: ~43MB → ~2.8MB (~15× kleiner)**
-- Originale gesichert in `~/Desktop/holytouch-photos-backup/`
+**Launch-Schutz — Platzhalter-Check:** Vor jedem echten Launch muss
+```
+grep -rn "PLATZHALTER" app/ components/
+```
+LEER sein. Solange Treffer → nicht launch-ready.
 
 ---
 
 ## Offene Tagesordnungs-Punkte
 
-### Schnell, kein Marisha-Input nötig — Kandidaten für nächste Session
-- **#6 „Angebot"-Label umbenennen:** Klingt geschäftsmäßig. Kandidaten: „Begleitung", „Sessions", „Praxis". Strategisch besser mit Marisha klären — kann aber auch als Vorschlag formuliert werden
-- **Email-Konsistenz-Audit:** `grep -ri "@" app/ components/` durchgehen, jede E-Mail-Erwähnung auf `marisha@holytouch.com` prüfen (~10 Min)
+### Erledigt diese Session
+- ~~#3 Verstand-Körper-Graphik~~ ✅
+- ~~#4 Marisha-Headline~~ ✅ (Vorschlag 5)
+- ~~#5 Credentials-Format~~ ✅
+- ~~#6 Angebot-Label~~ ✅ → „Begleitung"
+- ~~#2 Yes-Laddering~~ ✅ gebaut (Option C) — ABER Marisha-Veto-Check ausstehend (siehe Blocker)
 
-### Marisha-Input erforderlich
-- **#2 Yes-Laddering nach Hero:** Aktuelle Section zu schwach. Brauchen 4-6 Mikro-Aussagen eskalierend. *Frage an Marisha:* 5-7 typische Klientinnen-Sätze, wie SIE sie selbst aussprechen würde
-- **P2 Bio-Story-Erweiterung** der Marisha-Sektion
-
-### ERLEDIGT in dieser Session
-- ~~#3 Verstand-Körper-Graphik~~ ✅ Section gebaut und integriert
-- ~~#4 Marisha-Headline-Rewrite~~ ✅ Vorschlag 5 implementiert
-- ~~#5 Credentials-Format~~ ✅ section-label-Klasse entfernt, lesbar
-
----
-
-## Pre-Launch Blocker (nicht-verhandelbar)
-
-| Punkt | Status |
-|---|---|
-| Anwalts-Check Impressum + Datenschutz (Fachanwalt Medizinrecht/Heilberuferecht) | ⏳ Offen |
-| Berufshaftpflicht-Section ergänzen (Versicherer + Geltungsbereich) | ⏳ Offen, TODO im Impressum |
-| HWG-Compliance prüfen (keine Erfolgsversprechen, keine Vorher/Nachher) | ⏳ Prüfen |
-| Klientinnen-Einverständnis Testimonials dokumentieren | ⏳ Felix sagt rechtlich OK, Schriftlich sichern empfohlen |
-| Email-Konsistenz `marisha@holytouch.com` site-wide | ⏳ Verifizieren (per `grep -ri "@" app/ components/`) |
-| ~~Git-Repo initialisieren (Rollback-Safety)~~ | ✅ Erledigt 25.05.2026 |
-| ~~Compare-Hero-Route entfernen~~ | ✅ Erledigt 25.05.2026 |
-| ~~GitHub-Remote-Setup (Off-Site-Backup)~~ | ✅ Erledigt 28.05.2026 |
-| ~~Bildoptimierung Mobile-Performance~~ | ✅ Erledigt 28.05.2026 (~15× kleiner) |
+### Noch offen
+- **P2 Bio-Story-Erweiterung** Marisha-Sektion (Marisha-Input)
+- **Berufsbezeichnungs-Konsistenz prüfen** im Licht der non-HP-Klärung — der Anwalt klärt ob „Körpertherapeutin"/„psychosomatische Körpertherapie" für Nicht-HP haltbar ist oder umformuliert werden muss
 
 ---
 
 ## Git-Workflow (etabliert)
 
-Vier Befehle decken den Alltag ab:
-
 ```
-git status                          # Was hat sich geändert
-git add -A && git commit -m "..."   # Änderung als Fallback-Punkt
-git push                            # Off-Site sichern
-git restore .                       # Ungesicherte Änderungen verwerfen
-git log --oneline                   # History anschauen
+git status                          # immer ZUERST
+git add -A && git commit -m "..."   # alles stagen (sicherer als spezifische Files)
+git push                            # Off-Site + triggert Vercel-Deploy
+git restore .                       # ungesicherte Änderungen verwerfen
+git log --oneline                   # History
 ```
-
-**Rhythmus:** Nach jeder funktionierenden Änderung committen + push. Lieber zu viele kleine als zu wenige große. Vor riskanten Änderungen vorher committen.
-
-**WICHTIG — Workflow-Regel ab heute:** Vor jedem `git add` immer `git status` ausführen und alle modifizierten Files bewusst entscheiden. `git add -A` ist meist sicherer als `git add <spezifische-Datei>`. Eine spezifische Add-Operation hat in dieser Session die `app/page.tsx`-Integration für VerstandKoerper übersehen.
-
-**Was getrackt wird:** Code in `app/`, `components/`, Konfig-Files, `public/`-Assets (jetzt optimiert), `.agents/`-Skills, `package.json` + `package-lock.json`, `skills-lock.json`, `STATUS.md`.
-
-**Was NICHT getrackt wird:** `node_modules/`, `.next/`, `material/`, `.claude/`, `.impeccable/`.
-
-**STATUS.md-Rhythmus:** Eine Aktualisierung pro Session, am Sessionende. Ein Commit pro Session: „STATUS-Update nach Session vom [Datum]: [Hauptthema]".
+Ein logischer Change = ein Commit. STATUS.md einmal pro Session am Ende.
 
 ---
 
-## Brand-Guardrails
-
-- **Keine „Therapie"** ohne „Körper-" davor (Heilberuferecht)
-- **Kein Heilversprechen** (HWG §3) — auch nicht in Marketing-Copy oder Klientinnen-Zitaten
-- **Tonalität:** warm, intim, ehrlich, nicht-pressuring, kein Marketing-Sprech
-- **Visuelle DNA:** dunkel-warm, editorial, Fire/Ember-Ästhetik (Holy-Touch-Brand)
-- **Brand voice:** Simplicity, warmth, authenticity über Cleverness. Kurze Sätze, direkte Anrede, low-pressure. „Kühlschrank-tauglich" — universell resonant, nicht overly spiritual oder niche.
+## Doku-Dateien im Repo
+- **PRODUCT.md** — Brand-Bibel (Strategie, Copy, Verbote, Zielgruppe). Heute synced: „zeigt", „.com".
+- **STATUS.md** (dies) — Arbeitsstand & Sessions
+- **DESIGN.md** — technische Design-Spezifikation (Tokens, Fonts, Sections, Patterns). Hat noch ❓-Lücken für Komponenten deren Code nicht gesehen wurde (Hero, Marisha, Angebot, Erfahrungen, CTASection, Footer, Nav, PositioningLine, FadeIn, vollständiger globals.css) — bei Bedarf füllen.
 
 ---
 
 ## Diagnostic Lessons
 
-### Aus der Design-Session (24./25. Mai)
-1. **Browser-Zoom checken** bei „zu klein"-Feedback — nicht nur Display abfragen
-2. **Fonts müssen importiert sein** — Inkbleed-Sans-Fehler war ein invented font name
-3. **Outline-Buttons brauchen tonalen Hintergrund-Kontrast**
-4. **Visibility-Beschwerden:** Color UND Size simultan adressieren
-5. **Color-Audit per Pattern-Matching** statt exact-string-search (Alpha-Channel-Varianten werden sonst übersehen)
-6. **Section-Übergänge mit edge-to-edge Bildern** brauchen explizite Margin zwischen Sections
+### Frühe Sessions (24./25. Mai)
+1. Browser-Zoom checken bei „zu klein"-Feedback
+2. Fonts müssen importiert sein (Inkbleed-Sans-Fehler war historisch, inzwischen behoben — Dateien in public/fonts/)
+3. Outline-Buttons brauchen tonalen Hintergrund-Kontrast
+4. Visibility: Color UND Size simultan
+5. Color-Audit per Pattern-Matching (Alpha-Varianten)
+6. Section-Übergänge mit edge-to-edge Bildern brauchen explizite Margin
+7. STATUS.md kann stale sein — Realitäts-Check vor Aktionen
+8. Initial-Commit ohne .gitignore = korruptes Repo
+9. Ignore-Decisions: Tooling-Ordner erst inspizieren
+10. Vor destruktiven Operationen: Backup
 
-### Aus der Git-Setup-Session (25. Mai)
-7. **STATUS.md kann stale sein** — vor Aktionen kurzer Realitäts-Check
-8. **Initial-Commit ohne `.gitignore` = korruptes Repo** — `node_modules` landet permanent in History
-9. **Bei Ignore-Decisions Tooling-Ordner-Inhalte erst inspizieren** — nicht blind ignorieren
-10. **Vor destruktiven Operationen Backup** — `cp -R` kostet 30 Sekunden
-
-### Aus der Design-/GitHub-/Performance-Session (28. Mai)
-11. **Non-Breaking-Space-Schema bei aufgelisteten Begriffen:** Jede Phrase mit ihrem Trennzeichen als geschlossene Einheit verkleben (`<span style={{whiteSpace: 'nowrap'}}>Phrase ·</span>`), nicht den Trenn-Punkt zwischen zwei Phrasen mit Non-Breaking-Spaces verkleben — sonst entsteht eine monolithische unbreakable Wurst die das Layout sprengt.
-12. **`git status` IMMER vor `git add` ausführen.** `git add -A` ist meist sicherer als `git add <spezifische-Datei>`. Letztere Variante hat die VerstandKoerper-Integration in `app/page.tsx` übersehen — Section war committed, aber nicht in die Seite eingebunden.
-13. **Bildoptimierung ist Pre-Launch P1, nicht Backlog.** 50MB unoptimierte Bilder = 5-10s Mobile-Ladezeit. macOS hat `sips` built-in: `sips -Z 2400 -s format jpeg -s formatOptions 75 file.jpg --out file.jpg`.
-14. **`.next/` Build-Cache enthält gelegentlich stale Referenzen auf gelöschten Code** (z.B. `hero-v2.jpg` nach Compare-Hero-Entfernung). Ist gitignored, regeneriert sich, harmlos. Bei grep-Audit `.next/`-Matches ignorieren.
-15. **`git init` + `git remote add` + `git push` reicht NICHT für `origin/HEAD` symbolic ref.** Der wird nur bei `git clone` automatisch gesetzt. Nach manuellem Remote-Setup einmalig `git remote set-head origin -a` ausführen — sonst scheitern Diff-Tools wie `/security-review` mit „unknown revision".
-16. **GitHub CLI statt Personal Access Tokens.** `brew install gh` + `gh auth login` macht Browser-OAuth statt Token-Juggling. Einmalig Setup, danach push ohne Auth-Friction.
-17. **v0.dev-Workflow für Design-Sections:** Mood-Referenz (z.B. von Midjourney) hochladen → 3-6 Layout-Varianten generiert → eine picken → Inspect/Copy SVG-Elemente direkt extrahieren → in Claude Code adaptieren. Spart manuelles SVG-Pfad-Coding.
-18. **Bei Section-Iteration: konkret benennen welches Element wo nicht passt.** „Völlig verschoben" ist mehrdeutig — „Helix zu klein", „Synthese-Zeile zu klein für Sub-Headline", „Body-Text in Spalten nicht in Marisha-Body-Größe" ist iterationsfähig.
-19. **Keine Platzhalter wie `<...>` in zu kopierenden Befehlen** — Shell interpretiert `<` als Redirect-Operator. URLs/Paths vorab erfragen und in den Befehl einsetzen, damit copy-paste 1:1 funktioniert.
+### Session 28. Mai
+11. Non-Breaking-Space bei Listen: Phrase+Trennzeichen als geschlossene nowrap-Einheit, nicht Trenner zwischen zwei Phrasen verkleben
+12. `git status` IMMER vor `git add`. `git add -A` sicherer als spezifische Files (hat mal app/page.tsx-Integration übersehen)
+13. Bildoptimierung ist Pre-Launch P1. macOS `sips -Z 2400 -s format jpeg -s formatOptions 75 file.jpg --out file.jpg`
+14. `.next/` Build-Cache hat stale Referenzen auf gelöschten Code — gitignored, harmlos, bei grep ignorieren
+15. `git init`+`remote add`+`push` setzt KEIN `origin/HEAD` — manuell `git remote set-head origin -a` (sonst `/security-review` broken)
+16. GitHub CLI (`gh auth login`) statt Personal Access Tokens
+17. v0.dev-Workflow für Design-Sections: Mood-Ref → Varianten → SVG extrahieren → in Claude Code adaptieren
+18. Bei Section-Iteration konkret benennen welches Element wo nicht passt — nicht „verschoben"
+19. Keine `<...>`-Platzhalter in zu kopierenden Terminal-Befehlen (zsh-Redirect)
+20. **„Aktuelle Section zu schwach" in einem Status-Doc heißt ERSETZEN, nicht HINZUFÜGEN.** Fehler diese Session: Erkennen-Section gebaut während alte Yes-Laddering-Section noch da war → Duplikat. Bei „überarbeiten/verbessern" zuerst prüfen ob die alte Version weg muss.
+21. **`[[PLATZHALTER: ...]]`-Marker für unfertige Inhalte + grep-Guard vor Launch.** Niemals nackte TODO-Kommentare die live gehen könnten.
+22. **Claude Code berichtet gelegentlich falsch** — diese Session: garbled Email-Stellen-Report („Zeile 224 zusätzlich zu 224"), und Font-Audit sagte `.font-display → cormorant` obwohl schon EB Garamond. Berichte gegen Diff-Stats / grep verifizieren statt blind glauben.
+23. **non-HP-Positionierung ist die zentrale rechtliche Tatsache.** „Coaching mit Körpertherapie", kein Heilpraktiker. Bei jeder Wording-Frage mitdenken. Anwalt ist Pflicht-Gate, nicht Nice-to-have.
 
 ---
 
 ## Felix' Working Preferences
-
-- **Direkt, kein Cushioning, keine Pleasantries** — wenn falsch, sofort sagen warum
-- **`[Unverified]`** vor Aussagen, die nicht aus verifizierbaren Quellen stammen
-- **Annahmen herausfordern, Pushback bei Flawed Reasoning** — explizit gewünscht
-- **Recommendations begründen** — nicht nur „mach das", sondern „mach das weil X"
-- **Chirurgische Prompts** für Claude Code: explizite Before/After-Werte, Code-Blöcke, gezielte Find/Replace
-- **Keine Platzhalter wie `<...>` in Befehlen** — siehe Lesson #19
-- **Bei Skill-Unsicherheit zu Tooling/Setup:** Felix lieber lassen führen — Optionen kurz, Entscheidung treffen, Schritt für Schritt ausführen
-- **Felix ist NICHT der Praktiker, Marisha ist es** (Korrektur aus früherer Memory)
-
----
-
-## Two-Claude Workflow
-
-- **Mac-App (Strategie-Instanz):** Coaching, Design-Entscheidungen, Diagnose, Prompt-Authoring, Git-Workflow-Guidance
-- **Claude Code (Terminal):** Execution mit den chirurgischen Prompts aus der Mac-App
+- Direkt, kein Cushioning, keine Pleasantries
+- `[Unverified]` vor nicht-verifizierten Aussagen
+- Annahmen herausfordern, Pushback bei flawed reasoning — explizit gewünscht
+- Recommendations begründen
+- Chirurgische Prompts für Claude Code (Before/After, Code-Blöcke)
+- Keine `<...>`-Platzhalter in Befehlen
+- **Felix ist NICHT der Praktiker, Marisha ist es**
+- Marisha sitzt teils direkt daneben — Entscheidungen können live geholt werden statt async
 
 ---
 
 ## Opening Prompt für nächste Session
-
 ```
-Wir arbeiten am holytouch-Projekt weiter. STATUS.md liegt im Repo.
+Wir arbeiten am holytouch-Projekt weiter. Im Repo liegen PRODUCT.md
+(Brand-Bibel), STATUS.md (Arbeitsstand) und DESIGN.md (Design-Spec).
 
-Lies bitte zuerst STATUS.md durch (cat STATUS.md), dann gib mir zurück:
-1. Was du aus dem Status verstanden hast (in eigenen Worten, knapp)
-2. Welchen der offenen Punkte du zuerst angehen würdest und warum
-3. Welche Fragen du jetzt schon hast bevor wir loslegen
+Lies zuerst STATUS.md (cat STATUS.md), dann gib mir zurück:
+1. Was du verstanden hast (knapp, eigene Worte)
+2. Welchen offenen Punkt du zuerst angehen würdest und warum
+3. Offene Fragen vor dem Loslegen
 
-Workflow-Regeln aus STATUS beachten: direkt, kein Cushioning,
-[Unverified] labeln, Annahmen herausfordern.
+Beachte: Marisha ist KEINE HP (Coaching mit Körpertherapie) — der
+Anwalts-Check ist das kritische Launch-Gate.
 
-Vor jeder Code-Änderung: kurzer git status und ggf. git log --oneline,
-um den aktuellen Stand zu verifizieren.
+Workflow: direkt, kein Cushioning, [Unverified] labeln, Annahmen
+herausfordern. Vor Code-Änderungen: git status + ggf. git log --oneline.
 ```
 
 ---
 
-## Backlog / Nice-to-have (post-launch)
-
-- **`<Image>`-Component-Refactor:** Aktuell werden Bilder als statische URLs aus `public/` referenziert. Next.js `<Image>` macht responsive Größen, WebP/AVIF-Konvertierung und Lazy-Loading automatisch. Letzte 10% Performance-Gewinn — nach Launch.
-- **Duplikat-Commits in History (a806128 + 472ce7d):** Beide „Fotos optimiert"-Commits sind funktional gleich, kosmetisch unschön. Cleanup via `git rebase -i` möglich, aber Rewriting bereits gepushter History — nicht lohnend.
-- **Backup-Ordner-Cleanup:** `~/Desktop/webseite-holytouch-BACKUP-2026-05-25` (~400 MB) und `~/Desktop/holytouch-photos-backup/` (~43 MB Originale) können in einigen Tagen gelöscht werden, sobald sicher dass nichts mehr gebraucht wird.
-
----
-
-**[Unverified] Hinweis zur Memory zwischen Sessions:** Die Memory-Funktion liefert der nächsten Claude-Instanz eine high-level Zusammenfassung mit Verzögerung. Granulare Decisions aus dieser Session sind dort nicht abgebildet — daher dieses Dokument als Übergabe.
+## Backlog (post-launch)
+- `<Image>`-Component-Refactor (responsive/WebP/Lazy — letzte 10% Performance)
+- DESIGN.md ❓-Lücken füllen (Komponenten-Code durchgeben)
+- Duplikat-Commits a806128+472ce7d (kosmetisch, nicht lohnend zu fixen)
+- Backup-Ordner löschen: `~/Desktop/webseite-holytouch-BACKUP-2026-05-25` (~400MB), `~/Desktop/holytouch-photos-backup/` (~43MB)
+- Vercel „4 Recommendations" (Caching/Headers/SEO) mal anschauen

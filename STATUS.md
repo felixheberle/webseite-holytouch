@@ -139,6 +139,25 @@ Ein logischer Change = ein Commit. STATUS.md einmal pro Session am Ende.
 
 ---
 
+## Mobile-Optimierung (erledigt)
+- Hero vertikal: Header → Headline → Gesicht → Gold-CTA. .hero-section @media(max-width:768px): padding-top 13rem, padding-bottom 5.5rem, justify-content space-between.
+- Headline: clamp-Min von 2.625rem auf 2.375rem gesenkt → 3 Zeilen auf Phones; Desktop unverändert (nutzt 5.5vw ab ~691px).
+- Gesicht: hero.jpg ist 1600×2400 Hochformat → auf Mobile füllt es die Höhe exakt, KEIN vertikaler objectPosition-Spielraum (Y ist inert). Gesicht runtergeholt via transform: scale(1.18); transform-origin: center top auf .hero-image.
+- Header: Logo + Telefon eine Zeile; gap auf Mobile 1rem (Basis 2.25rem) → passt bis 360px Viewport. .site-header__cta display:none auf Mobile.
+- CTA-Buttons: beide nutzen a.cta-button (Mobile: padding 1.1rem 2rem, max-width 100%). .hero-cta-mobile-Wrapper hat 2.5rem seitliches Padding → Hero-Button = gleiche Breite wie unterer CTA.
+
+## Overflow-Krieg (gelöst, war Mobile-Horizontal-Scroll)
+Zwei Ursachen: (1) VerstandKoerper war grid '1fr auto 1fr' ohne Mobile-Fallback → @media .vk-grid grid-template-columns:1fr. (2) CTA-Content-div shrink-to-fit auf zu breiten Button → maxWidth:100%. overflow-x:hidden auf html ist nur noch Sicherheitsnetz.
+
+## KEY LESSON — CSS-Reihenfolge-Falle
+Der @media(max-width:768px)-Block steht VOR den Basis-Regeln. Die meisten Basis-Regeln stehen davor → Overrides gewinnen. ABER Basis-.cta-button steht als EINZIGE nach dem @media-Block → bei gleicher Spezifität gewinnt die spätere Regel → Mobile-Padding verlor STILL. Gefixt via a.cta-button (Spezifität 0,1,1 > .cta-button 0,1,0). CLEANUP-TODO: Basis-.cta-button hoch zu den anderen Basis-Regeln verschieben (oder @media-Block ans Dateiende), dann ist der a.-Trick überflüssig.
+
+## Diagnostik-Technik (für künftige Overflow-Bugs)
+- Konsolen-Locator: Elemente mit getBoundingClientRect().right > clientWidth listen → findet zu breite Elemente.
+- Hide-Nav-Test: nav auf display:none, scrollWidth re-messen → trennt das fixed-Element-Symptom von der echten Quelle (fixed left:0;right:0 dehnt sich auf die Scroll-Breite, die was anderes erzeugt).
+
+---
+
 ## Diagnostic Lessons
 
 ### Frühe Sessions (24./25. Mai)

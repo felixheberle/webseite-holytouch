@@ -12,6 +12,7 @@ export function Hero({
   return (
     <section
       aria-label="Hero"
+      className="hero-section"
       style={{
         position: 'relative',
         height: '100svh',
@@ -19,7 +20,6 @@ export function Hero({
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
       }}
     >
       <Image
@@ -45,7 +45,7 @@ export function Hero({
 
       <div style={{ position: 'relative', padding: '0 2.5rem 0', maxWidth: '960px' }}>
         <p
-          className="font-display"
+          className="font-display hero-headline"
           style={{
             fontSize: 'clamp(2.625rem, 5.5vw, 5.75rem)',
             lineHeight: 1.04,
@@ -60,16 +60,17 @@ export function Hero({
           nicht sagen kann.
         </p>
 
-        <div className="hero-cta-mobile" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 6vw, 3rem)' }}>
-          <a
-            href="https://calendly.com/holytouch/kennenlerngespraech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-button"
-          >
-            Kostenloses Kennenlerngespräch
-          </a>
-        </div>
+      </div>
+
+      <div className="hero-cta-mobile" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 6vw, 3rem)', marginBottom: '0' }}>
+        <a
+          href="https://calendly.com/holytouch/kennenlerngespraech"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button"
+        >
+          Kostenloses Kennenlerngespräch
+        </a>
       </div>
     </section>
   )

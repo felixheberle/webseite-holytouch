@@ -110,6 +110,11 @@ body {
   .hero-headline {
     text-align: center;
   }
+  .hero-subline {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .hero-image {
     transform: scale(1.18);
     transform-origin: center top;

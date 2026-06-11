@@ -62,14 +62,14 @@ export function Hero({
         </p>
 
         <p
+          className="hero-subline"
           style={{
             fontFamily: 'var(--font-eb-garamond), EB Garamond, Georgia, serif',
             fontSize: 'clamp(1rem, 3.2vw, 1.35rem)',
             lineHeight: 1.4,
             color: 'oklch(93% 0.012 85 / 0.8)',
-            textAlign: 'center',
             maxWidth: '52ch',
-            margin: '1.25rem auto 0',
+            marginTop: '1.25rem',
           }}
         >
           Körpertherapie am Ammersee — Gespräch und Körperarbeit, die wieder in Kontakt bringen.

@@ -145,6 +145,16 @@ body {
   border-bottom-color: oklch(67% 0.08 88 / 0.5);
 }
 
+/* ─── Hero Mobile CTA ─── */
+.hero-cta-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hero-cta-mobile {
+    display: block;
+  }
+}
+
 /* ─── Section label ─── */
 .section-label {
   font-family: 'Inkbleed Sans', Georgia, serif;

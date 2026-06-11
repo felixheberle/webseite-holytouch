@@ -59,6 +59,17 @@ export function Hero({
           <br />
           nicht sagen kann.
         </p>
+
+        <div className="hero-cta-mobile" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 6vw, 3rem)' }}>
+          <a
+            href="https://calendly.com/holytouch/kennenlerngespraech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button"
+          >
+            Kostenloses Kennenlerngespräch
+          </a>
+        </div>
       </div>
     </section>
   )

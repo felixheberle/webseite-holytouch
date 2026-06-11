@@ -29,6 +29,7 @@ export function Hero({
         priority
         quality={88}
         sizes="100vw"
+        className="hero-image"
         style={{ objectFit: 'cover', objectPosition: objectPosition }}
       />
 

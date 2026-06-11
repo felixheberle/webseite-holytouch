@@ -93,6 +93,7 @@ body {
 @media (max-width: 768px) {
   .site-header {
     padding: 1rem 1.25rem;
+    gap: 1rem;
   }
   .site-header__cta {
     display: none;
@@ -109,12 +110,17 @@ body {
   .hero-headline {
     text-align: center;
   }
+  .hero-image {
+    transform: scale(1.18);
+    transform-origin: center top;
+  }
   .hero-cta-mobile {
     display: block;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  .cta-button {
+  /* a.cta-button: höhere Spezifität, schlägt die weiter unten definierte Basis-.cta-button */
+  a.cta-button {
     width: auto;
     max-width: 100%;
     padding: 1.1rem 2rem;

@@ -77,6 +77,8 @@ body {
 
 .hero-cta-mobile {
   display: none;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -89,7 +91,7 @@ body {
 
   .hero-section {
     justify-content: space-between;
-    padding-top: 8rem;
+    padding-top: 10rem;
     padding-bottom: 2.75rem;
   }
   .hero-headline {

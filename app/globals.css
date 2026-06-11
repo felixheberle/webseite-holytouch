@@ -111,6 +111,8 @@ body {
   }
   .hero-cta-mobile {
     display: block;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   .cta-button {
     width: auto;

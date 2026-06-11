@@ -77,15 +77,7 @@ export function Nav() {
       />
 
       {/* Content — position: relative so it sits above the absolute layers */}
-      <div
-        style={{
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '1rem 2.5rem',
-        }}
-      >
+      <div className="site-header">
         {/* Logo */}
         <Link href="/" aria-label="holytouch — Startseite" style={{ textDecoration: 'none' }}>
           <div
@@ -95,13 +87,13 @@ export function Nav() {
               letterSpacing: '0.01em',
             }}
           >
-            <span style={{ display: 'block', fontSize: '4.5rem', lineHeight: 0.92, fontStyle: 'oblique' }}>holy</span>
-            <span style={{ display: 'block', fontSize: '4.5rem', lineHeight: 0.92 }}>touch</span>
+            <span style={{ display: 'block', fontSize: 'clamp(2.5rem, 11vw, 4.5rem)', lineHeight: 0.92, fontStyle: 'oblique' }}>holy</span>
+            <span style={{ display: 'block', fontSize: 'clamp(2.5rem, 11vw, 4.5rem)', lineHeight: 0.92 }}>touch</span>
             <span
               style={{
                 display: 'block',
                 fontFamily: "'Inkbleed Sans', Georgia, serif",
-                fontSize: '0.85rem',
+                fontSize: 'clamp(0.6rem, 2.2vw, 0.85rem)',
                 letterSpacing: '0.38em',
                 textTransform: 'uppercase',
                 lineHeight: 1,
@@ -115,10 +107,10 @@ export function Nav() {
         </Link>
 
         {/* Right nav: Telefon + Kennenlerngespräch */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2.25rem' }}>
           <a
             href="tel:+4981524809056"
             aria-label="Jetzt anrufen: 08152 / 4809056"
+            className="site-header__phone"
             style={{
               fontFamily: "'Inkbleed Sans', Georgia, serif",
               fontSize: '1.25rem',
@@ -152,11 +144,10 @@ export function Nav() {
             href="https://calendly.com/holytouch/kennenlerngespraech"
             target="_blank"
             rel="noopener noreferrer"
-            className="nav-link"
+            className="site-header__cta nav-link"
           >
             Kennenlerngespräch
           </a>
-        </div>
       </div>
     </nav>
   )

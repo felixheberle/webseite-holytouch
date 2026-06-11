@@ -48,7 +48,7 @@ export function Hero({
         <p
           className="font-display hero-headline"
           style={{
-            fontSize: 'clamp(2.625rem, 5.5vw, 5.75rem)',
+            fontSize: 'clamp(2.375rem, 5.5vw, 5.75rem)',
             lineHeight: 1.04,
             letterSpacing: '-0.01em',
             color: 'oklch(93% 0.012 85)',

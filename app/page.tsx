@@ -1,6 +1,5 @@
 import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
-import { PositioningLine } from '@/components/PositioningLine'
 import Erkennen from '@/components/Erkennen'
 import { Method } from '@/components/Method'
 import { VerstandKoerper } from '@/components/VerstandKoerper'
@@ -16,7 +15,6 @@ export default function HomePage() {
       <Nav />
       <main>
         <Hero />
-        <PositioningLine />
         <Erkennen />
         <Method />
         <VerstandKoerper />

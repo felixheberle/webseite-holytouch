@@ -61,6 +61,20 @@ export function Hero({
           nicht sagen kann.
         </p>
 
+        <p
+          style={{
+            fontFamily: 'var(--font-eb-garamond), EB Garamond, Georgia, serif',
+            fontSize: 'clamp(1rem, 3.2vw, 1.35rem)',
+            lineHeight: 1.4,
+            color: 'oklch(93% 0.012 85 / 0.8)',
+            textAlign: 'center',
+            maxWidth: '52ch',
+            margin: '1.25rem auto 0',
+          }}
+        >
+          Körpertherapie am Ammersee — Gespräch und Körperarbeit, die wieder in Kontakt bringen.
+        </p>
+
       </div>
 
       <div className="hero-cta-mobile" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 6vw, 3rem)', marginBottom: '0' }}>

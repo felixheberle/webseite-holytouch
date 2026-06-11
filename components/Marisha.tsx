@@ -37,7 +37,7 @@ export function Marisha() {
                 marginBottom: '2.5rem',
               }}
             >
-              Warum mich der Körper nie losgelassen hat.
+              Warum ich diese Arbeit mache.
             </h2>
 
             <div
@@ -59,7 +59,7 @@ export function Marisha() {
                 Über die Jahre habe ich viel Selbsterfahrung gesammelt, in Gruppen- und Einzelarbeit. Irgendwann wollte ich das, was zwischen Worten und Körper entsteht, bewusster nutzen — also habe ich Gesprächsführung gelernt und dem Reden in meiner Arbeit mehr Raum gegeben. So bringe ich das Gesagte in direkte Verbindung mit dem, was du fühlst und im Körper spürst.
               </p>
               <p>
-                Mir geht es darum, dass du dich in deinem eigenen Körper wieder spürst. Präsent. Sicher. Und dass du verstehst, was dein Körper dir zeigt.
+                Mir geht es darum, dass du in deinem eigenen Körper wieder präsent und sicher bist. Und dass du verstehst, was dein Körper dir zeigt.
               </p>
             </div>
 

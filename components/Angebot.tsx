@@ -1,7 +1,7 @@
 import { FadeIn } from './FadeIn'
 
 const anamnese = {
-  name: 'Anamnese',
+  name: 'Erstgespräch',
   detail: '2 Stunden',
   price: '200 €',
 }
@@ -9,7 +9,6 @@ const anamnese = {
 const einzelsitzung = {
   name: 'Einzelsitzung',
   variants: [
-    { detail: '1 Stunde', price: '100 €' },
     { detail: '1,5 Stunden', price: '150 €' },
     { detail: '2 Stunden', price: '200 €' },
   ],

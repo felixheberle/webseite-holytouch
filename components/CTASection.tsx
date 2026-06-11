@@ -25,7 +25,7 @@ export function CTASection() {
             margin: '0 auto 3rem',
           }}
         >
-          Zwanzig Minuten reichen, um zu spüren,<br />ob ich die Richtige bin.
+          Zehn Minuten reichen, um zu spüren,<br />ob ich die Richtige bin.
         </h2>
 
         <a

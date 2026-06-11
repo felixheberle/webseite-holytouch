@@ -41,16 +41,7 @@ export function VerstandKoerper() {
         </h2>
 
         {/* Two columns with helix in middle */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr auto 1fr',
-            gap: 'clamp(2rem, 4vw, 4rem)',
-            maxWidth: '950px',
-            margin: '0 auto',
-            alignItems: 'start',
-          }}
-        >
+        <div className="vk-grid">
           {/* Left column */}
           <div style={{ textAlign: 'center' }}>
             <h3
@@ -93,7 +84,7 @@ export function VerstandKoerper() {
             aria-hidden
             width="180"
             height="245"
-            style={{ alignSelf: 'center' }}
+            style={{ alignSelf: 'center', display: 'block', margin: '0 auto' }}
           >
             <path
               d="M44 6 C 44 60 150 74 110 132 C 88 166 132 176 110 214"

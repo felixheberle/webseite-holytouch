@@ -81,12 +81,24 @@ body {
   z-index: 2;
 }
 
+.vk-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  max-width: 950px;
+  margin: 0 auto;
+  align-items: start;
+}
+
 @media (max-width: 768px) {
   .site-header {
     padding: 1rem 1.25rem;
   }
   .site-header__cta {
     display: none;
+  }
+  .vk-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-section {
@@ -100,8 +112,7 @@ body {
   .hero-cta-mobile {
     display: block;
   }
-  .hero-cta-mobile .cta-button {
-    display: inline-block;
+  .cta-button {
     width: auto;
     max-width: 100%;
     padding: 1.1rem 2rem;

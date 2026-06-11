@@ -13,6 +13,7 @@ export function CTASection() {
         style={{
           textAlign: 'center',
           padding: 'clamp(4rem, 8vw, 7rem) 2.5rem',
+          maxWidth: '100%',
         }}
       >
         <h2

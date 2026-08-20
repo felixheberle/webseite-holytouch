@@ -40,19 +40,6 @@ export default function ImpressumPage() {
       </section>
 
       <section>
-        <h2>Berufshaftpflichtversicherung</h2>
-        <p>
-          Name und Sitz des Versicherers:<br />
-          [[PLATZHALTER: Name der Versicherung]]<br />
-          [[PLATZHALTER: Straße, PLZ Ort]]
-        </p>
-        <p>
-          Räumlicher Geltungsbereich der Versicherung:<br />
-          [[PLATZHALTER: z. B. Deutschland]]
-        </p>
-      </section>
-
-      <section>
         <h2>Bildnachweise</h2>
         <p>
           Fotografien: © Marlene Etzel, Forenoon Studios<br />

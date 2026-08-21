@@ -11,6 +11,7 @@ const ebGaramond = EB_Garamond({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://holytouch.com'),
   title: 'holytouch — Körpertherapie am Ammersee',
   description:
     'Körpertherapie für berufstätige Frauen. Körpertherapeutin Marisha Pommerenke, Praxis in Hechenwang am Ammersee.',

@@ -1,12 +1,13 @@
 # Holytouch Website — Stand & nächste Schritte
 
-**Datum:** 10. Juni 2026 (Sektion-Strecke überarbeitet: Erkennen/Method/VerstandKoerper Copy + Reihenfolge)
-**Projektordner:** `/Users/felixheberle/Desktop/webseite-holytouch/`
-**Dev-Server:** localhost:3003 (oder :3004 falls belegt)
+**Datum:** 21. August 2026 (Go-Live + Ordnerstruktur)
+**Projektordner:** `/Users/felixheberle/Developer/webseite-holytouch/` (war `~/Desktop/`, umgezogen am 20.08.)
+**Dev-Server:** localhost:3000
 **Workflow:** Mac-App (Strategie) + Claude Code Terminal (Execution)
-**Git:** Branch `main`, sauber, letzter Commit `c98fbc8`
+**Git:** Branch `main`, sauber, letzter Commit `77206af`
 **GitHub:** `https://github.com/felixheberle/webseite-holytouch` (private)
-**Vercel-Staging:** `https://webseite-holytouch.vercel.app` (live, Auto-Deploy bei push auf main)
+**Live-Domain:** `https://holytouch.com` — **live seit 21.08.** Root ist Production, `www` leitet per 307 weiter.
+**Vercel-Staging:** `https://webseite-holytouch.vercel.app` (bleibt bestehen)
 **Auth:** GitHub CLI (`gh auth login`, Browser-OAuth)
 
 ---
@@ -87,10 +88,11 @@ cdf4059 Brand-Alignment: Method 'Körperarbeit' + Erkennen Option C
 | Punkt | Status |
 |---|---|
 | Anwaltliche Kurzeinschätzung (optional, Absicherung) Impressum + Datenschutz | ⏳ optional — kein harter Blocker, ~200-600€, Risiko-Entscheidung Felix/Marisha |
-| Berufshaftpflicht-Daten von Marisha → Platzhalter ersetzen | ⏳ Struktur steht, Daten ausstehend (Versicherer Name+Adresse, Geltungsbereich) |
+| ~~Berufshaftpflicht-Daten von Marisha → Platzhalter ersetzen~~ | ✅ Erledigt 20.08. — **Section komplett entfernt statt gefüllt.** Marisha hat keine Berufshaftpflicht; die DL-InfoV verlangt die Angabe nur „falls vorhanden". Kein Platzhalter mehr im Impressum. |
 | HWG-Compliance-Verifizierung | ⏳ Teil des Anwalts-Checks |
-| Testimonial-Consent schriftlich (3 Klientinnen) | ⏳ Marisha |
+| ~~Testimonial-Consent schriftlich (3 Klientinnen)~~ | ✅ Erledigt |
 | Yes-Laddering Veto-Check durch Marisha (Option C ohne ihr finales OK gebaut) | ⏳ Marisha — Screenshot zeigen, fragen ob ein Satz nicht stimmt |
+| ~~**Go-Live**~~ | ✅ **Erledigt 21.08.** — holytouch.com ist live |
 | ~~Email-Konsistenz site-wide~~ | ✅ Erledigt 28.05. (alle .com) |
 | ~~Bildoptimierung~~ | ✅ Erledigt 28.05. (~15× kleiner) |
 | ~~GitHub-Remote / Off-Site-Backup~~ | ✅ Erledigt 28.05. |
@@ -123,12 +125,41 @@ LEER sein. Solange Treffer → nicht launch-ready.
 
 ```
 git status                          # immer ZUERST
+git switch -c feat/...              # NIE direkt auf main arbeiten
 git add -A && git commit -m "..."   # alles stagen (sicherer als spezifische Files)
-git push                            # Off-Site + triggert Vercel-Deploy
+git push -u origin HEAD             # Off-Site + Vercel-Preview
+gh pr create --base main            # Merge macht ausschließlich Felix
 git restore .                       # ungesicherte Änderungen verwerfen
 git log --oneline                   # History
 ```
 Ein logischer Change = ein Commit. STATUS.md einmal pro Session am Ende.
+
+> **Geändert seit Go-Live:** Der frühere Ablauf endete bei `git push` auf `main`.
+> Seit `main` = Produktion ist das ein Live-Deploy — siehe „Build & Deployment".
+
+---
+
+## Build & Deployment
+
+**Package Manager: pnpm, nie npm.** Das `package-lock.json` wurde entfernt (PR #2).
+Zwei Lockfiles im Repo hatten dazu geführt, dass Produktion drei Monate lang gegen
+veraltete Versionen baute, während lokal aktuelle installiert waren. Vercel wählt
+den Package Manager anhand des Lockfiles — taucht wieder ein `package-lock.json`
+auf, ist das ein Fehler, kein Detail. Siehe auch Lektion 24.
+
+**sharp-Build-Skript** ist über `pnpm-workspace.yaml` freigegeben (`allowBuilds`).
+pnpm blockt Post-Install-Skripte standardmäßig; ohne die Freigabe fehlt sharp die
+native Binary und die Bildoptimierung fällt im Build aus.
+
+**Push auf `main` = Live-Deploy.** Vercel deployt jeden Push auf `main` direkt auf
+holytouch.com. Deshalb immer: Feature-Branch → Commit → Push → PR gegen `main`.
+Die Vercel-Preview-URL des PR ist der eigentliche Review-Gegenstand. Gemergt wird
+ausschließlich von Felix. Die stehenden Regeln dazu liegen in **CLAUDE.md**.
+
+**DNS:** Nameserver bleiben bei United Domains, nur die A-Records zeigen auf Vercel.
+Die MX-Records (Google Workspace, `marisha@holytouch.com`) sind unangetastet — beim
+Ändern von DNS-Einträgen also nie pauschal „alles auf Vercel" umstellen, sonst ist
+die Mail weg.
 
 ---
 
@@ -186,6 +217,12 @@ Der @media(max-width:768px)-Block steht VOR den Basis-Regeln. Die meisten Basis-
 21. **`[[PLATZHALTER: ...]]`-Marker für unfertige Inhalte + grep-Guard vor Launch.** Niemals nackte TODO-Kommentare die live gehen könnten.
 22. **Claude Code berichtet gelegentlich falsch** — diese Session: garbled Email-Stellen-Report („Zeile 224 zusätzlich zu 224"), und Font-Audit sagte `.font-display → cormorant` obwohl schon EB Garamond. Berichte gegen Diff-Stats / grep verifizieren statt blind glauben.
 23. **non-HP ist die rechtliche Grund-Tatsache.** „Coaching mit Körpertherapie", kein Heilpraktiker. Site bewusst auf nicht-geschützte Begriffe ausgelegt. Anwaltlicher Check ist optionale Absicherung, kein Pflicht-Gate. Korrektur aus dieser Session: zwischenzeitlich als „kritisches Launch-Gate" überzeichnet — Pushback war berechtigt. Lehre: rechtliche Sorgen an der tatsächlichen Wortwahl der Site prüfen, nicht pauschal eskalieren.
+24. **Zwei Lockfiles im Repo = stiller Versions-Drift zwischen lokal und Prod.**
+    Vercel wählt den Package Manager am Lockfile — lag neben der `pnpm-lock.yaml`
+    noch ein `package-lock.json`, baute Prod monatelang gegen andere Versionen als
+    die lokale Entwicklung, ohne dass irgendetwas fehlschlug. Prüfen:
+    `node_modules`-Struktur (`.pnpm/` + Symlinks = pnpm) und Versionsabgleich
+    installiert vs. Lockfile. Siehe „Build & Deployment".
 
 ---
 
@@ -225,5 +262,16 @@ herausfordern. Vor Code-Änderungen: git status + ggf. git log --oneline.
 - `<Image>`-Component-Refactor (responsive/WebP/Lazy — letzte 10% Performance)
 - DESIGN.md ❓-Lücken füllen (Komponenten-Code durchgeben)
 - Duplikat-Commits a806128+472ce7d (kosmetisch, nicht lohnend zu fixen)
-- Backup-Ordner löschen: `~/Desktop/webseite-holytouch-BACKUP-2026-05-25` (~400MB), `~/Desktop/holytouch-photos-backup/` (~43MB)
 - Vercel „4 Recommendations" (Caching/Headers/SEO) mal anschauen
+
+### SEO / Auffindbarkeit (nach Go-Live)
+- **robots.txt + sitemap.xml** — fehlten beide (404). Fix liegt als Route-Handler
+  in PR #4 (`chore/seo-robots-sitemap`), noch nicht gemergt. Bis zum Merge auf
+  `main` sind beide auf holytouch.com weiterhin 404.
+- **Google Search Console** einrichten, Sitemap einreichen (setzt PR #4 voraus)
+- **Google Business Profile** auf die neue Domain aktualisieren
+
+### Datensicherung
+- `material/` (164MB, Foto-Originale) liegt im Repo-Ordner und ist gitignored.
+  Kopie in iCloud vorhanden. **Time Machine fehlt noch** — aktuell hängt alles an
+  iCloud als einziger Kopie.

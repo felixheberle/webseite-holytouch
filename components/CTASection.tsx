@@ -1,3 +1,5 @@
+import { TrackedLink } from './TrackedLink'
+
 export function CTASection() {
   return (
     <section
@@ -28,14 +30,16 @@ export function CTASection() {
           Zehn Minuten reichen, um zu spüren,<br />ob ich die Richtige bin.
         </h2>
 
-        <a
+        <TrackedLink
+          event="CTA-Klick"
+          position="CTASection"
           href="https://calendly.com/holytouch/kennenlerngespraech"
           target="_blank"
           rel="noopener noreferrer"
           className="cta-button"
         >
           Kostenloses Kennenlerngespräch
-        </a>
+        </TrackedLink>
 
         <div
           style={{
@@ -46,9 +50,15 @@ export function CTASection() {
             flexWrap: 'wrap',
           }}
         >
-          <a href="tel:+4981524809056" className="contact-link" style={{ color: 'oklch(93% 0.012 85)', opacity: 0.85, fontSize: '1rem' }}>
+          <TrackedLink
+            event="Telefon-Klick"
+            position="CTASection"
+            href="tel:+4981524809056"
+            className="contact-link"
+            style={{ color: 'oklch(93% 0.012 85)', opacity: 0.85, fontSize: '1rem' }}
+          >
             08152 / 4809056
-          </a>
+          </TrackedLink>
           <a href="mailto:marisha@holytouch.com" className="contact-link" style={{ color: 'oklch(93% 0.012 85)', opacity: 0.85, fontSize: '1rem' }}>
             marisha@holytouch.com
           </a>

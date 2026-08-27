@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { TrackedLink } from './TrackedLink'
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -107,7 +108,9 @@ export function Nav() {
         </Link>
 
         {/* Right nav: Telefon + Kennenlerngespräch */}
-          <a
+          <TrackedLink
+            event="Telefon-Klick"
+            position="Header"
             href="tel:+4981524809056"
             aria-label="Jetzt anrufen: 08152 / 4809056"
             className="site-header__phone"
@@ -138,16 +141,18 @@ export function Nav() {
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.57 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2.84h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 10a16 16 0 0 0 6.29 6.29l1.06-1.26a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 17.18z" />
             </svg>
             08152 / 4809056
-          </a>
+          </TrackedLink>
 
-          <a
+          <TrackedLink
+            event="CTA-Klick"
+            position="Header"
             href="https://calendly.com/holytouch/kennenlerngespraech"
             target="_blank"
             rel="noopener noreferrer"
             className="site-header__cta nav-link"
           >
             Kennenlerngespräch
-          </a>
+          </TrackedLink>
       </div>
     </nav>
   )

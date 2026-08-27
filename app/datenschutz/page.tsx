@@ -73,7 +73,33 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>5. Schriften (selbst gehostet)</h2>
+        <h2>5. Webanalyse (Vercel Web Analytics)</h2>
+        <p>
+          Diese Website nutzt Vercel Web Analytics, einen Dienst der
+          Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.
+        </p>
+        <p>
+          Vercel Web Analytics arbeitet ohne Cookies und ohne Speicherung
+          personenbezogener Daten. Es werden keine IP-Adressen gespeichert
+          und keine geräteübergreifenden Profile gebildet. Erfasst werden
+          ausschließlich aggregierte Zugriffszahlen, aufgerufene Seiten,
+          Referrer und grobe Herkunftsregion.
+        </p>
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+          Interesse an der statistischen Auswertung der Websitenutzung).
+        </p>
+        <p>
+          Weitere Informationen:{' '}
+          <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank"
+             rel="noopener noreferrer">
+            vercel.com/docs/analytics/privacy-policy
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Schriften (selbst gehostet)</h2>
         <p>
           Diese Website verwendet die Schriften „Inkbleed Sans" und
           „Cormorant Garamond". Beide werden direkt vom Server dieser
@@ -83,7 +109,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>6. Kontaktaufnahme</h2>
+        <h2>7. Kontaktaufnahme</h2>
         <p>
           Wenn du mich per E-Mail oder Telefon kontaktierst, werden die
           von dir übermittelten Daten (z. B. Name, E-Mail-Adresse,
@@ -103,7 +129,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>7. Terminbuchung (Calendly)</h2>
+        <h2>8. Terminbuchung (Calendly)</h2>
         <p>
           Für die Online-Terminbuchung verlinke ich auf den Dienst
           Calendly (Calendly LLC, 271 17th St NW, Atlanta, GA 30363, USA).
@@ -133,7 +159,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>8. Instagram (externer Link)</h2>
+        <h2>9. Instagram (externer Link)</h2>
         <p>
           Auf dieser Website ist ein Link zu meinem Instagram-Profil
           eingebunden (Meta Platforms Ireland Limited, 4 Grand Canal Square,
@@ -152,7 +178,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>9. Cookies</h2>
+        <h2>10. Cookies</h2>
         <p>
           Diese Website verwendet keine eigenen Tracking-Cookies und bindet
           keine cookie-setzenden Drittanbieter-Widgets ein. Externe Dienste
@@ -164,7 +190,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>10. Keine Weitergabe an Dritte</h2>
+        <h2>11. Keine Weitergabe an Dritte</h2>
         <p>
           Deine Daten werden nicht an Dritte verkauft oder weitergegeben —
           mit Ausnahme der oben genannten Dienstleister sowie gesetzlicher
@@ -173,7 +199,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>11. Deine Rechte</h2>
+        <h2>12. Deine Rechte</h2>
         <p>
           Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung
           (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der
@@ -190,7 +216,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2>12. Aktualität</h2>
+        <h2>13. Aktualität</h2>
         <p>
           Diese Datenschutzerklärung ist aktuell gültig (Stand: Mai 2026).
           Sie kann bei Änderungen der Website oder gesetzlicher Vorgaben

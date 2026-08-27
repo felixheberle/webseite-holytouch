@@ -76,7 +76,7 @@ export default function DatenschutzPage() {
         <h2>5. Webanalyse (Vercel Web Analytics)</h2>
         <p>
           Diese Website nutzt Vercel Web Analytics, einen Dienst der
-          Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.
+          Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.
         </p>
         <p>
           Vercel Web Analytics arbeitet ohne Cookies und ohne Speicherung
@@ -102,9 +102,17 @@ export default function DatenschutzPage() {
         <h2>6. Schriften (selbst gehostet)</h2>
         <p>
           Diese Website verwendet die Schriften „Inkbleed Sans" und
-          „Cormorant Garamond". Beide werden direkt vom Server dieser
-          Website ausgeliefert. Es findet keine Datenübermittlung an
-          externe Schrift-Dienste wie Google Fonts oder Adobe Fonts statt.
+          „EB Garamond". Beide werden direkt vom Server dieser Website
+          ausgeliefert: „Inkbleed Sans" als hier hinterlegte Schriftdatei,
+          „EB Garamond" über next/font, das die Schriftdateien bereits beim
+          Erstellen der Website herunterlädt und zusammen mit ihr ausliefert.
+        </p>
+        <p>
+          Beim Aufruf dieser Seite wird deshalb keine Verbindung zu Servern
+          von Google hergestellt. Es findet keine Datenübermittlung an
+          externe Schrift-Dienste wie Google Fonts oder Adobe Fonts statt;
+          insbesondere wird deine IP-Adresse nicht an solche Dienste
+          übermittelt.
         </p>
       </section>
 

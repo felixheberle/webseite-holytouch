@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { TrackedLink } from './TrackedLink'
 
 interface HeroProps {
   objectPosition?: string
@@ -78,14 +79,16 @@ export function Hero({
       </div>
 
       <div className="hero-cta-mobile" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 6vw, 3rem)', marginBottom: '0' }}>
-        <a
+        <TrackedLink
+          event="CTA-Klick"
+          position="Hero"
           href="https://calendly.com/holytouch/kennenlerngespraech"
           target="_blank"
           rel="noopener noreferrer"
           className="cta-button"
         >
           Kostenloses Kennenlerngespräch
-        </a>
+        </TrackedLink>
       </div>
     </section>
   )
